@@ -1,7 +1,7 @@
 {
   "number": 52,
-  "commit": "2e3d55c3afb5f3da0381f6cfa082a350b23dadc2",
+  "commit": "4f6490691c4df29f8a095d96779b4d99fe8f1a50",
   "title": "Record the decision to ship one product with access tiers",
   "branch": "claude/adr-one-product",
-  "updated": "2026-09-28 16:09 UTC"
+  "updated": "2026-09-28 16:14 UTC"
 }
