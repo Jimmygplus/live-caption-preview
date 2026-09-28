@@ -1,0 +1,7 @@
+{
+  "number": 44,
+  "commit": "70227a44d048b87bf3f53031491bf1e9fcfd8473",
+  "title": "Preview every pull request on its own page before it is merged",
+  "branch": "claude/pr-previews",
+  "updated": "2026-09-28 07:21 UTC"
+}
