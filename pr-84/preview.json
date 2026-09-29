@@ -1,6 +1,6 @@
 {
   "number": 84,
-  "commit": "0f2e5dd9bb3f4f791cd8a1554486237bdc8ff18a",
+  "commit": "2663aeb86bc3b40eb516e34db2f7e352b710903d",
   "title": "Stop the phone keyboard popping up on the join code, and iOS zooming into it",
   "branch": "claude/no-autofocus-join",
   "updated": "2026-09-29 09:35 UTC"
