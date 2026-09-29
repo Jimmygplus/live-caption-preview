@@ -1,6 +1,6 @@
 {
   "number": 106,
-  "commit": "05a19ed1c62684281964cd0d4b0ad599b31006f7",
+  "commit": "c8a06f505c9d3433ea78b988ec2eec620d27bb1c",
   "title": "Never translate a language into itself",
   "branch": "claude/one-way-distinct-languages",
   "updated": "2026-09-29 13:56 UTC"
