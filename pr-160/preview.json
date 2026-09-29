@@ -1,7 +1,0 @@
-{
-  "number": 160,
-  "commit": "0dacf5f3488620f61ae8a01b01f5f69678fcea00",
-  "title": "Check sign-in requests with Cloudflare Turnstile once its keys are set",
-  "branch": "claude/signin-turnstile",
-  "updated": "2026-09-29 15:43 UTC"
-}
