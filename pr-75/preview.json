@@ -1,7 +1,0 @@
-{
-  "number": 75,
-  "commit": "4dcae50bb6eb6211ee6ce4da366ab793f975ca0c",
-  "title": "Bring back the audio check with suggestions and the service check",
-  "branch": "claude/restore-audio-service-check",
-  "updated": "2026-09-29 07:58 UTC"
-}
