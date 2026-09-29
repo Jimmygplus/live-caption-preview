@@ -1,0 +1,7 @@
+{
+  "number": 78,
+  "commit": "943cc18e1148650247dad6a68182c0bf496f9cb6",
+  "title": "Put the account first in the Access dialog, keys under Advanced; show signed-in time left",
+  "branch": "claude/access-order-time-left",
+  "updated": "2026-09-29 07:30 UTC"
+}
