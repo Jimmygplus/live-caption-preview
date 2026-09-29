@@ -1,6 +1,6 @@
 {
   "number": 83,
-  "commit": "b4e433a560cf14e8e02c2c6094a79da1915597d9",
+  "commit": "8776d2801d3ea122b1633fee38b7c3ad468cd618",
   "title": "Give the saved-transcript prompt Open, Not now and Delete, and say new captions replace it",
   "branch": "claude/recovery-actions",
   "updated": "2026-09-29 09:28 UTC"
