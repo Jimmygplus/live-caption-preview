@@ -1,0 +1,7 @@
+{
+  "number": 60,
+  "commit": "cece99c415bdf2e2486dd8a2128baaad8bfbde8e",
+  "title": "Expose sign-in over HTTP behind an off-by-default switch",
+  "branch": "claude/auth-routes",
+  "updated": "2026-09-29 04:46 UTC"
+}
