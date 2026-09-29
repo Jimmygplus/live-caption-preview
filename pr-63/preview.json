@@ -1,0 +1,7 @@
+{
+  "number": 63,
+  "commit": "75cd73b153c5e64a924983915ca898f4dfce331d",
+  "title": "Keep a register of every user-visible feature and who approved it",
+  "branch": "claude/feature-register",
+  "updated": "2026-09-29 05:06 UTC"
+}
