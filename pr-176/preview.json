@@ -1,0 +1,7 @@
+{
+  "number": 176,
+  "commit": "98e615731a1f83a3cedd98e0aa79923864c0de5f",
+  "title": "Serve roomcaption.com from a Worker, and let the services accept it",
+  "branch": "claude/roomcaption-domain",
+  "updated": "2026-09-29 17:15 UTC"
+}
