@@ -1,7 +1,0 @@
-{
-  "number": 56,
-  "commit": "6cec300ce8c85e7990e9c1319e0a525521bcf281",
-  "title": "Give the ledger a Durable Object and a dark Stripe webhook route",
-  "branch": "claude/ledger-durable-object",
-  "updated": "2026-09-29 04:32 UTC"
-}
