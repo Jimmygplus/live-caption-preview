@@ -1,7 +1,7 @@
 {
   "number": 116,
-  "commit": "e6426655ba77a856b29e2e0cbc40d64df6c9cce3",
+  "commit": "fa9aeb81a7f3b00f56f2b1b7bd84a17a4a2d53c5",
   "title": "Remove Claude translation from the new app",
   "branch": "claude/remove-claude-translation",
-  "updated": "2026-09-29 15:13 UTC"
+  "updated": "2026-09-29 15:56 UTC"
 }
