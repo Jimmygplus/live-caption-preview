@@ -1,7 +1,0 @@
-{
-  "number": 193,
-  "commit": "5c46aca8ce957b688f32b9f68eb77c3f8b8c4cc0",
-  "title": "Run live acceptance against roomcaption.com, and record the domain checks",
-  "branch": "claude/live-acceptance-roomcaption",
-  "updated": "2026-09-29 22:55 UTC"
-}
