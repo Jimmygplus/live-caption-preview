@@ -1,6 +1,6 @@
 {
   "number": 107,
-  "commit": "b0fc9c32dca8db4be183290a18187f11f2149b58",
+  "commit": "54ee9f855011088e801e7c3f48551ef9d735853f",
   "title": "Say what a failed Claude request means instead of showing its raw response",
   "branch": "claude/service-check-plain-errors",
   "updated": "2026-09-29 13:41 UTC"
