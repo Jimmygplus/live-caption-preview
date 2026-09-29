@@ -1,7 +1,0 @@
-{
-  "number": 120,
-  "commit": "61feced243f934f8d99e68074e72c040e210fd26",
-  "title": "Pair each translation chunk with the original it follows (F2)",
-  "branch": "claude/pair-translation",
-  "updated": "2026-09-29 16:16 UTC"
-}
