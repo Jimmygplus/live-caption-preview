@@ -1,0 +1,7 @@
+{
+  "number": 62,
+  "commit": "0814400460c8d0aa010c30983d7e4c5e552f420e",
+  "title": "Let signed-in accounts open Stripe Checkout for paid hours",
+  "branch": "claude/checkout",
+  "updated": "2026-09-29 05:02 UTC"
+}
