@@ -1,7 +1,7 @@
 {
   "number": 85,
-  "commit": "4a36a8b7b1c01fb70be2de3928f09599259967d1",
+  "commit": "14dfde9af9949965ef3b6719e7ce3a2d4e011c07",
   "title": "Use buttons instead of dropdowns on touch screens",
   "branch": "claude/mobile-choices",
-  "updated": "2026-09-29 09:52 UTC"
+  "updated": "2026-09-29 09:53 UTC"
 }
