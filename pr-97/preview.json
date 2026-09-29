@@ -1,6 +1,6 @@
 {
   "number": 97,
-  "commit": "203b540b6190faf4d8d7bd19ac6eb11d8e357676",
+  "commit": "149540292e22bb021f502532f606220524871149",
   "title": "Save the transcript at once when the page is hidden or closed",
   "branch": "claude/save-transcript-on-leave",
   "updated": "2026-09-29 13:12 UTC"
