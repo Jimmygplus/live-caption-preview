@@ -1,7 +1,7 @@
 {
   "number": 167,
-  "commit": "f52607f23499ed58fe8c38e85b40782d147a33ca",
+  "commit": "2d5bfd3db77cbaddc7804b8fe2d73233f4488a98",
   "title": "Bring back correcting a caption during the conversation (R3/P3)",
   "branch": "claude/live-correction",
-  "updated": "2026-09-29 16:06 UTC"
+  "updated": "2026-09-29 16:53 UTC"
 }
