@@ -1,7 +1,0 @@
-{
-  "number": 202,
-  "commit": "21a7d4ac387e053ae36cb7e7e23de6b7f0cb2fea",
-  "title": "Write down the account API for the apps, and test deletion as the app sends it",
-  "branch": "claude/app-delete-contract",
-  "updated": "2026-09-29 23:09 UTC"
-}
