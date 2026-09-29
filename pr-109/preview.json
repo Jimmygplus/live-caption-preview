@@ -1,7 +1,7 @@
 {
   "number": 109,
-  "commit": "734a22336a7db833daee85f3da8d534f5037b9b0",
+  "commit": "8179ec2076e92cded2850d264fdc55a0a46d48c2",
   "title": "Check the mobile app on pull requests that touch it",
   "branch": "claude/mobile-ci-job",
-  "updated": "2026-09-29 13:48 UTC"
+  "updated": "2026-09-29 13:51 UTC"
 }
