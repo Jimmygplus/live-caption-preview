@@ -1,0 +1,7 @@
+{
+  "number": 57,
+  "commit": "8c523d90f0b403fab804bff5e9bb97d1067a754d",
+  "title": "Add a live acceptance run against the deployed app",
+  "branch": "claude/issue-36-live-acceptance",
+  "updated": "2026-09-29 04:34 UTC"
+}
