@@ -1,7 +1,7 @@
 {
   "number": 98,
-  "commit": "5eafb0e7d9d11c7cdd2bfdc39431a97d2daf4dd3",
-  "title": "Propose adaptive caption segmentation (D11, proposal only)",
+  "commit": "52c92db52eb68958b05957bd2ef3da46d9ee6e1d",
+  "title": "Reading design proposals: segmentation (D11), languages and line sizes (D12)",
   "branch": "claude/adaptive-segmentation-proposal",
-  "updated": "2026-09-29 13:31 UTC"
+  "updated": "2026-09-29 13:50 UTC"
 }
