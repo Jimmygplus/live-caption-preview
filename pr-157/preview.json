@@ -1,7 +1,7 @@
 {
   "number": 157,
-  "commit": "06eca859395117c461089d557a576b1161b2f78c",
+  "commit": "e76a464f160cf0c1b9ce8e6cec1a5da6550dc074",
   "title": "End captions at the screen's length and on a change of language (step 4)",
   "branch": "claude/endpoint-segmentation",
-  "updated": "2026-09-29 15:38 UTC"
+  "updated": "2026-09-29 16:49 UTC"
 }
