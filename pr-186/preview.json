@@ -1,0 +1,7 @@
+{
+  "number": 186,
+  "commit": "de1ad6f5ec8933fb38bb9d105cba30c1fadd6fcd",
+  "title": "Remove own API keys from the app (A3, #170)",
+  "branch": "claude/remove-own-keys",
+  "updated": "2026-09-29 17:36 UTC"
+}
