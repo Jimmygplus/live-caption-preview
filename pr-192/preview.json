@@ -1,7 +1,0 @@
-{
-  "number": 192,
-  "commit": "db2cab7516708804be56e3a597a7f21869be9a8d",
-  "title": "Purge a closed account's books five years after it closed",
-  "branch": "claude/retention-purge",
-  "updated": "2026-09-29 22:49 UTC"
-}
