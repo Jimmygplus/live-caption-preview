@@ -1,0 +1,7 @@
+{
+  "number": 58,
+  "commit": "ff821c291e0da24e4a67864c925394f37d2d1b8c",
+  "title": "Add passwordless sign-in: emailed link or 6-digit code",
+  "branch": "claude/passwordless-auth-core",
+  "updated": "2026-09-29 04:38 UTC"
+}
