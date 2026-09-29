@@ -1,0 +1,7 @@
+{
+  "number": 54,
+  "commit": "e36c5bcd6a6c72f6dfea705d95e12135ac6b9290",
+  "title": "Port the paid-hours ledger and Stripe webhook rules into trial/",
+  "branch": "claude/port-billing-ledger",
+  "updated": "2026-09-29 02:00 UTC"
+}
