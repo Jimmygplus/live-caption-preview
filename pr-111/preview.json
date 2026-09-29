@@ -1,7 +1,7 @@
 {
   "number": 111,
-  "commit": "7c4980d470392d72bef15d74a95bf02d41b115e1",
+  "commit": "f9e281a51ce6b5a3c8a3b892da1f97283ffdbb6c",
   "title": "packages/core: move room cryptography and its interop tests (#91 step 1)",
   "branch": "claude/mobile-core-crypto",
-  "updated": "2026-09-29 13:52 UTC"
+  "updated": "2026-09-29 16:16 UTC"
 }
