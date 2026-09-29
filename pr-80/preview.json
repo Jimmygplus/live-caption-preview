@@ -1,6 +1,6 @@
 {
   "number": 80,
-  "commit": "e79735b966d11f6e5e5aab318416dd353cfc9a5f",
+  "commit": "c3c20606dcda37fec08761cf72f86ee1a6588ba3",
   "title": "Center Home as a short welcome with Start and Join; no scrolling before captions",
   "branch": "claude/home-centered",
   "updated": "2026-09-29 07:50 UTC"
