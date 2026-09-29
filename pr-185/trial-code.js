@@ -33,7 +33,7 @@ export async function startFreeTrial({ brokerUrl, fetchImpl = fetch }) {
 }
 
 async function requestTrial(brokerUrl, action, payload, fetchImpl) {
-  if (!brokerUrl) throw new Error('The free trial is not configured. You can use your own Soniox API key.');
+  if (!brokerUrl) throw new Error('The free trial is not configured.');
   let response;
   try {
     response = await fetchImpl(`${brokerUrl.replace(/\/$/, '')}/v1/trials/${action}`, {
