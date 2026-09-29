@@ -1,0 +1,7 @@
+{
+  "number": 165,
+  "commit": "5cd6e114562128ea7600bab0a1aeff01f4bbd0b0",
+  "title": "Attach the diagnostic log to feedback only when asked (X1)",
+  "branch": "claude/feedback-defaults",
+  "updated": "2026-09-29 15:59 UTC"
+}
