@@ -1,0 +1,7 @@
+{
+  "number": 197,
+  "commit": "8c1287e292437c5b400e8573171e5b50515c7984",
+  "title": "Amend ADR-0001: the new app no longer offers own provider keys",
+  "branch": "claude/adr-0001-own-keys",
+  "updated": "2026-09-29 22:54 UTC"
+}
