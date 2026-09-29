@@ -1,7 +1,7 @@
 {
   "number": 78,
-  "commit": "943cc18e1148650247dad6a68182c0bf496f9cb6",
+  "commit": "cb7af81a07bfcf8b5ed56635536ed9a517e8a41a",
   "title": "Put the account first in the Access dialog, keys under Advanced; show signed-in time left",
   "branch": "claude/access-order-time-left",
-  "updated": "2026-09-29 07:30 UTC"
+  "updated": "2026-09-29 07:31 UTC"
 }
