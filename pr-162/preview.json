@@ -1,6 +1,6 @@
 {
   "number": 162,
-  "commit": "5ecf3d64aba24e33f772f43ddb3c3dc5e337357a",
+  "commit": "ca04057daa3f34af12ea020cc6dc8e7b445cfccd",
   "title": "Give phones the host's live line: reserved room, faint tail, timely drafts (F4, F5)",
   "branch": "claude/phone-parity",
   "updated": "2026-09-29 15:48 UTC"
