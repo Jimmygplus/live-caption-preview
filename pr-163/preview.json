@@ -1,7 +1,0 @@
-{
-  "number": 163,
-  "commit": "d8312f5d82b31d5a58cbc234473fbb7ae1e9228a",
-  "title": "Paint Home before the app loads, and preload its fonts (F6)",
-  "branch": "claude/static-first-paint",
-  "updated": "2026-09-29 15:54 UTC"
-}
