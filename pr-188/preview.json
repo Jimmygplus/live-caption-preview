@@ -1,0 +1,7 @@
+{
+  "number": 188,
+  "commit": "8ada3cb0872aef4a1cdd7936d86d58ffc3e0ad88",
+  "title": "Keep provider names out of the interface (#171, web part)",
+  "branch": "claude/hide-provider-names",
+  "updated": "2026-09-29 17:39 UTC"
+}
