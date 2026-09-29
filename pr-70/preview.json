@@ -1,0 +1,7 @@
+{
+  "number": 70,
+  "commit": "02bb35f583bc56214a4fc28f44c67420f61d95b6",
+  "title": "Move display settings into an Aa popover; bring back the reply sound",
+  "branch": "claude/display-popover",
+  "updated": "2026-09-29 06:48 UTC"
+}
