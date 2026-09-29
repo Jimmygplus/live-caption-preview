@@ -1,7 +1,0 @@
-{
-  "number": 71,
-  "commit": "e964976291841db24e1e7a01caabedd061f037c1",
-  "title": "Show the full email in the access chip (ADR-0002); drop the unused AccountButton",
-  "branch": "claude/unmask-email",
-  "updated": "2026-09-29 06:52 UTC"
-}
