@@ -1,0 +1,7 @@
+{
+  "number": 113,
+  "commit": "25d01a6f70ae7bb99f9d0a0c461dd50fce1272ca",
+  "title": "Let a signed-in person delete their account with an emailed code (#94 item 1)",
+  "branch": "claude/account-deletion",
+  "updated": "2026-09-29 14:06 UTC"
+}
