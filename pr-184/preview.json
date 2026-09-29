@@ -1,7 +1,0 @@
-{
-  "number": 184,
-  "commit": "e78ed68480bfc484bc6ebc73f34d537fe318a397",
-  "title": "Add ledger operations and the refunds and disputes ADR (#53)",
-  "branch": "claude/ledger-ops",
-  "updated": "2026-09-29 22:49 UTC"
-}
