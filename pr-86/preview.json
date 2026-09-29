@@ -1,7 +1,7 @@
 {
   "number": 86,
-  "commit": "d7963859db3157c5abc4874fbe46d1a9a6b53f1d",
-  "title": "Put Start back in the control bar and restore the join card on Home",
+  "commit": "549a861edd50167fb89b89c380de6a51c0b090c4",
+  "title": "Put Start back in the control bar and tighten the join card on Home",
   "branch": "claude/home-controls-restore",
-  "updated": "2026-09-29 12:43 UTC"
+  "updated": "2026-09-29 12:49 UTC"
 }
