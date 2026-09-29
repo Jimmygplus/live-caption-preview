@@ -1,7 +1,0 @@
-{
-  "number": 110,
-  "commit": "496b211451f20955e3203637728bd29b090904a0",
-  "title": "Escape closes one layer at a time; drop an unused helper and a stale test name",
-  "branch": "claude/small-cleanups",
-  "updated": "2026-09-29 13:49 UTC"
-}
