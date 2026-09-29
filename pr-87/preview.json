@@ -1,7 +1,7 @@
 {
   "number": 87,
-  "commit": "929ea5442b536364ed71dfa1a74360386be83c27",
+  "commit": "e0faebb6668a338eaa4ddd9357591de2d2fb1d00",
   "title": "Add mobile (C) and marketing (D) sessions to the roles table",
   "branch": "claude/roles-c-d",
-  "updated": "2026-09-29 12:22 UTC"
+  "updated": "2026-09-29 12:44 UTC"
 }
