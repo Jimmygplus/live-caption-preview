@@ -1,7 +1,7 @@
 {
   "number": 105,
-  "commit": "e5b95d56291284b8c07e045e0df96262680ed526",
+  "commit": "f5222b951f27e571d79f16bd087f7aaed69c91ad",
   "title": "Export and review in the order things were said, timed to when speech ended",
   "branch": "claude/export-time-order",
-  "updated": "2026-09-29 13:37 UTC"
+  "updated": "2026-09-29 13:38 UTC"
 }
