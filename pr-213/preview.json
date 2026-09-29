@@ -1,0 +1,7 @@
+{
+  "number": 213,
+  "commit": "3f95b0b7393823c3f864b1bd99bdd199a1d36ce9",
+  "title": "Say when free trials start again, and stop offering an own API key",
+  "branch": "claude/trial-limit-messages",
+  "updated": "2026-09-29 23:50 UTC"
+}
