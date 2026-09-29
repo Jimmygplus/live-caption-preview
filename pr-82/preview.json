@@ -1,7 +1,7 @@
 {
   "number": 82,
-  "commit": "ab241bdf80a77d6763f197ba9a9f3d98c884b306",
+  "commit": "8825d725efa7d156e1c20fc3bea439f93df1644e",
   "title": "Keep English on the top line in every mode, and fix the text size controls",
   "branch": "claude/fixed-line-order",
-  "updated": "2026-09-29 09:15 UTC"
+  "updated": "2026-09-29 09:41 UTC"
 }
