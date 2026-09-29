@@ -1,7 +1,0 @@
-{
-  "number": 183,
-  "commit": "17362ee812e9dabacfc4eb5ff10ecc212cc3a635",
-  "title": "Let App Review sign in without an inbox, while two secrets are set",
-  "branch": "claude/review-signin",
-  "updated": "2026-09-29 22:48 UTC"
-}
