@@ -1,0 +1,7 @@
+{
+  "number": 100,
+  "commit": "36cd7789d709c91fbc778b08074e7c485ff9c177",
+  "title": "Offer a report only for faults, and keep the offer clear of the controls",
+  "branch": "claude/report-prompt-expected-outcomes",
+  "updated": "2026-09-29 13:22 UTC"
+}
