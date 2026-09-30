@@ -1,7 +1,0 @@
-{
-  "number": 261,
-  "commit": "38b782543b7ad29c583d1dc2b0550549f842d681",
-  "title": "Test that a hidden host line keeps the participants' order (#231)",
-  "branch": "claude/two-way-hidden-line-order",
-  "updated": "2026-09-30 09:32 UTC"
-}
