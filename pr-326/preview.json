@@ -1,7 +1,0 @@
-{
-  "number": 326,
-  "commit": "59f2d6eb500b6a8b7b1dcdb533ab5e9dc609c765",
-  "title": "Give every caption line its language (lang): Chinese punctuation and screen-reader voice",
-  "branch": "claude/caption-lang",
-  "updated": "2026-09-30 15:56 UTC"
-}
