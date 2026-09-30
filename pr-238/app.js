@@ -8,38 +8,38 @@
 //               unless the server has a Claude key, in which case finalized lines
 //               are translated through /api/translate.
 
-import { qrDataUrl } from './qr.js?v=6c9b5d73';
+import { qrDataUrl } from './qr.js?v=ec0c1eee';
 import {
   AUDIO_SIGNAL_MIN_RMS,
   classifyAudioSignal,
   defaultAudioSourceLabel,
   isDefaultAudioSource,
   resolveAudioSourcePreference,
-} from './audio-source.js?v=6c9b5d73';
+} from './audio-source.js?v=ec0c1eee';
 import {
   AUDIO_CHECK_AMBIENT_MS,
   AUDIO_CHECK_SPEECH_MS,
   analyzeAudioCheck,
   formatDbfs,
-} from './audio-check.js?v=6c9b5d73';
-import { linkedFontSizes } from './font-size.js?v=6c9b5d73';
+} from './audio-check.js?v=ec0c1eee';
+import { linkedFontSizes } from './font-size.js?v=ec0c1eee';
 import {
   CAPTION_STATES,
   applyCaptionPatch,
   createFinalCaption,
   draftView,
-} from './caption-state.js?v=6c9b5d73';
+} from './caption-state.js?v=ec0c1eee';
 import {
   decryptAudiencePayload,
   detectTypedLanguage,
   encryptAudiencePayload,
   hashAudienceToken,
   randomAudienceSecret,
-} from './audience-crypto.js?v=6c9b5d73';
-import { AUDIENCE_RELAY_URL } from './relay-config.js?v=6c9b5d73';
-import { createJoinKeyPair, unwrapJoinSecret, wrapJoinSecret } from './join-crypto.js?v=6c9b5d73';
-import { TRIAL_BROKER_URL } from './trial-config.js?v=6c9b5d73';
-import { formatTrialCode, redeemTrialCode, startFreeTrial, validTrialCode } from './trial-code.js?v=6c9b5d73';
+} from './audience-crypto.js?v=ec0c1eee';
+import { AUDIENCE_RELAY_URL } from './relay-config.js?v=ec0c1eee';
+import { createJoinKeyPair, unwrapJoinSecret, wrapJoinSecret } from './join-crypto.js?v=ec0c1eee';
+import { TRIAL_BROKER_URL } from './trial-config.js?v=ec0c1eee';
+import { formatTrialCode, redeemTrialCode, startFreeTrial, validTrialCode } from './trial-code.js?v=ec0c1eee';
 
 const SONIOX_WS = 'wss://stt-rt.soniox.com/transcribe-websocket';
 const SONIOX_MODEL = 'stt-rt-v5';
@@ -1890,7 +1890,7 @@ function saveTermsFromForm() {
 // several industries can be stacked (e.g. 研发 + 金融).
 async function loadGlossaryPacks() {
   try {
-    const res = await fetch('./glossaries.json?v=6c9b5d73');
+    const res = await fetch('./glossaries.json?v=ec0c1eee');
     const data = await res.json();
     app.packs = data.packs || [];
   } catch {
@@ -2679,7 +2679,7 @@ async function startAudio() {
   io.ctx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
   if (io.ctx.state === 'suspended') await io.ctx.resume();
 
-  await io.ctx.audioWorklet.addModule('./pcm-worklet.js?v=6c9b5d73');
+  await io.ctx.audioWorklet.addModule('./pcm-worklet.js?v=ec0c1eee');
 
   const source = io.ctx.createMediaStreamSource(io.mediaStream);
   io.node = new AudioWorkletNode(io.ctx, 'pcm-processor', {
@@ -2885,7 +2885,7 @@ async function startAudioCheck() {
     const checkContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
     audioCheck.ctx = checkContext;
     if (checkContext.state === 'suspended') await checkContext.resume();
-    await checkContext.audioWorklet.addModule('./pcm-worklet.js?v=6c9b5d73');
+    await checkContext.audioWorklet.addModule('./pcm-worklet.js?v=ec0c1eee');
     if (!audioCheck.running || audioCheck.attempt !== attempt) {
       capturedStream.getTracks().forEach((captureTrack) => captureTrack.stop());
       void checkContext.close();

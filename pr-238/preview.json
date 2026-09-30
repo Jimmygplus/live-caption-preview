@@ -1,7 +1,7 @@
 {
   "number": 238,
-  "commit": "6c9b5d738b76627581515df75dc199419310ae54",
+  "commit": "ec0c1eee5e7e8e61c181a06422941ee77aa30fdb",
   "title": "Turn on the apps' own daily trial allowance",
   "branch": "claude/app-trial-pool-on",
-  "updated": "2026-09-30 04:33 UTC"
+  "updated": "2026-09-30 04:41 UTC"
 }
