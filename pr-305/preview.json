@@ -1,0 +1,7 @@
+{
+  "number": 305,
+  "commit": "e36480fcd79d98d6b01384fa006129449d2dc0b2",
+  "title": "Home loads only what it shows: dialogs, screens and recognisers split out (#289)",
+  "branch": "claude/split-bundle",
+  "updated": "2026-09-30 14:35 UTC"
+}
