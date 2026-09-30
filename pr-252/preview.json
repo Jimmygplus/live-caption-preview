@@ -1,7 +1,7 @@
 {
   "number": 252,
-  "commit": "03386e0e5ef11eeb1d4c9a4a7eda99b312c1840e",
+  "commit": "3e9e1a4afb33bb20a931221550f4954fd1efb4c6",
   "title": "Mobile: caption size follows the screen; a centred reading column on iPad",
   "branch": "claude/mobile-caption-sizing",
-  "updated": "2026-09-30 05:36 UTC"
+  "updated": "2026-09-30 05:38 UTC"
 }
