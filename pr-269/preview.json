@@ -1,0 +1,7 @@
+{
+  "number": 269,
+  "commit": "9826ef4d48c73c74040989751c0b8a84aff25bda",
+  "title": "QA: live check for #257 trial resume and #254 late joiners (runs on Actions when labelled)",
+  "branch": "qa/live-257-254",
+  "updated": "2026-09-30 09:48 UTC"
+}
