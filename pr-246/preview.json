@@ -1,0 +1,7 @@
+{
+  "number": 246,
+  "commit": "507480e272a12e490c5c7f1c8ec3d474a02cc21a",
+  "title": "Mobile: after a dropped connection, keep the captions and offer Continue captions",
+  "branch": "claude/mobile-capture-continue",
+  "updated": "2026-09-30 05:16 UTC"
+}
