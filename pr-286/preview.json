@@ -1,0 +1,7 @@
+{
+  "number": 286,
+  "commit": "1bfe888cc38e06ecc93fb860732eb8c542d4bcc3",
+  "title": "Mobile: set ITSAppUsesNonExemptEncryption false (export compliance option A)",
+  "branch": "claude/export-compliance-plist",
+  "updated": "2026-09-30 10:23 UTC"
+}
