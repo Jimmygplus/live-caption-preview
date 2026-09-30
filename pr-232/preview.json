@@ -1,7 +1,7 @@
 {
   "number": 232,
-  "commit": "f07e80ce21b9333e9a08219f02bd2f254474e810",
-  "title": "Caption area redesign: two directions to choose from (draft, do not merge)",
+  "commit": "708744bfafb61fa85fc0b038e25bd05d81617894",
+  "title": "Caption area redesign: direction A (speaker turns, page scroll, hand-written motion)",
   "branch": "claude/caption-area",
-  "updated": "2026-09-30 04:29 UTC"
+  "updated": "2026-09-30 04:36 UTC"
 }
