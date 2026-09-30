@@ -1,7 +1,7 @@
 {
   "number": 317,
-  "commit": "695f837d6602e2df616466cb15d6bf029186e34c",
+  "commit": "ee7e2d019a830ecdb3ba1c4698c9c75eb4ad9251",
   "title": "QA (test only, do not merge): #305 split-off parts on a production build, in WebKit",
   "branch": "qa/pr305-webkit",
-  "updated": "2026-09-30 15:22 UTC"
+  "updated": "2026-09-30 15:51 UTC"
 }
