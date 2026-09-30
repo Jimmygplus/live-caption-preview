@@ -1,7 +1,0 @@
-{
-  "number": 335,
-  "commit": "5a976b94e5d670aba11e4a83666c3c5d8b5f1088",
-  "title": "WebKit CI: 40-minute limit and cached Playwright browsers",
-  "branch": "claude/webkit-ci-cache",
-  "updated": "2026-09-30 16:44 UTC"
-}
