@@ -1,7 +1,0 @@
-{
-  "number": 302,
-  "commit": "51fa4f9cbff029fc81b3dfa673f4093885ddc64c",
-  "title": "QA: side-by-side checks in WebKit (#229 regressions: #265, #266, S3, S4)",
-  "branch": "qa/webkit-columns",
-  "updated": "2026-09-30 12:32 UTC"
-}
