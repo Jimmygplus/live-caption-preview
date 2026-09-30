@@ -1,7 +1,7 @@
 {
   "number": 323,
-  "commit": "b6169ee0bd672dd5669311652e94eed6bc99c4cf",
+  "commit": "df4c26071915f3b8af46df14a454634bae60e615",
   "title": "QA throwaway: #315 pause-pairing check in WebKit (do not merge)",
   "branch": "qa/pr315-webkit",
-  "updated": "2026-09-30 15:51 UTC"
+  "updated": "2026-09-30 15:56 UTC"
 }
