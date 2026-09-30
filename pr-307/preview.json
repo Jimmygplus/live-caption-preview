@@ -1,7 +1,7 @@
 {
   "number": 307,
-  "commit": "d46e6e11cc16d657ac539f9596e779ddd72bc664",
+  "commit": "d2aca243b8112dfe89e488da78c8e9eda6865866",
   "title": "QA: live side-by-side check with real speech (one-way English to Chinese)",
   "branch": "qa/live-sbs-real",
-  "updated": "2026-09-30 14:43 UTC"
+  "updated": "2026-09-30 14:57 UTC"
 }
