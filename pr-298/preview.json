@@ -1,7 +1,0 @@
-{
-  "number": 298,
-  "commit": "2f44923fc001bf28a1630a018286e86ee3519162",
-  "title": "Mobile: add expo-system-ui so Android follows the system dark mode",
-  "branch": "claude/mobile-system-ui",
-  "updated": "2026-09-30 11:47 UTC"
-}
