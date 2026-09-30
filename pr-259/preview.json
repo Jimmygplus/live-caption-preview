@@ -1,7 +1,0 @@
-{
-  "number": 259,
-  "commit": "9b7e2154cbb7d47d5eedc2ec3c3066e9a43d30ff",
-  "title": "Mobile runbook: run eas-cli through npx -y eas-cli@24.8.0",
-  "branch": "claude/runbook-eas-cli",
-  "updated": "2026-09-30 09:31 UTC"
-}
