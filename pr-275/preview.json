@@ -1,7 +1,0 @@
-{
-  "number": 275,
-  "commit": "619cd68e11ffd70237254b00e2681245603fb582",
-  "title": "Say \"1 second\" when reconnecting (#271)",
-  "branch": "claude/reconnect-seconds-plural",
-  "updated": "2026-09-30 10:03 UTC"
-}
