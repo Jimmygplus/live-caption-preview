@@ -1,0 +1,7 @@
+{
+  "number": 332,
+  "commit": "dda3605631ace93a9afafccf16d651dcb16eb9d8",
+  "title": "Rollback workflow for each release line, and warnings when a rollback target is missing",
+  "branch": "claude/release-rollback",
+  "updated": "2026-09-30 16:25 UTC"
+}
