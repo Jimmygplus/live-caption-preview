@@ -1,0 +1,7 @@
+{
+  "number": 315,
+  "commit": "74467fc50a01ab70f937a9c75878dde68a821261",
+  "title": "Keep each translation beside its own original after a pause (#312)",
+  "branch": "claude/pause-shift",
+  "updated": "2026-09-30 15:09 UTC"
+}
