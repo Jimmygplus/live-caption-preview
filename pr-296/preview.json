@@ -1,7 +1,7 @@
 {
   "number": 296,
-  "commit": "defb7391df22ff4b7e57a0e93cd0388fd7f95b7a",
+  "commit": "b55aa02870b07aba1573b168f5bdd45530dc68b8",
   "title": "QA (test only, do not merge): #229 retest at 7d1476c in WebKit",
   "branch": "qa/pr229-webkit-7d1476c",
-  "updated": "2026-09-30 11:06 UTC"
+  "updated": "2026-09-30 11:24 UTC"
 }
