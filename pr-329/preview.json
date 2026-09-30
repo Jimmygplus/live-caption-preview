@@ -1,7 +1,7 @@
 {
   "number": 329,
-  "commit": "f6fdba6ca4e71503132940be573c1fe766916186",
+  "commit": "c24f9bb6f92f22fa771011879daf7a82df92003f",
   "title": "Allow capsie.io in the relay, trial and feedback Workers",
   "branch": "claude/capsie-origins",
-  "updated": "2026-09-30 16:03 UTC"
+  "updated": "2026-09-30 16:23 UTC"
 }
