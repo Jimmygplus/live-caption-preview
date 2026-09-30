@@ -1,0 +1,7 @@
+{
+  "number": 285,
+  "commit": "6fa944530f722a699a64697b6c2312046522289e",
+  "title": "ADR-0005 (proposed): keeping the app trial pool for real app users",
+  "branch": "claude/app-pool-abuse-adr",
+  "updated": "2026-09-30 10:21 UTC"
+}
