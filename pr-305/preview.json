@@ -1,7 +1,7 @@
 {
   "number": 305,
-  "commit": "2898f2b961e1ebde06367091b0d1e42877eba921",
+  "commit": "dd340e373da4dcd40684c0abb47c52e96f7f540b",
   "title": "Home loads only what it shows, with a safe fallback when a part fails to load (#289)",
   "branch": "claude/split-bundle",
-  "updated": "2026-09-30 16:31 UTC"
+  "updated": "2026-09-30 16:32 UTC"
 }
