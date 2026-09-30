@@ -1,7 +1,0 @@
-{
-  "number": 224,
-  "commit": "475b699fcdb199bce8c1fb55d26203dcb8d75948",
-  "title": "QA: test plan and local end-to-end suite (Playwright)",
-  "branch": "qa/e2e-suite",
-  "updated": "2026-09-30 04:06 UTC"
-}
