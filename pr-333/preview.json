@@ -1,0 +1,7 @@
+{
+  "number": 333,
+  "commit": "9f97bfdfcd94bbd3f5a2e1773bf8764963f27c81",
+  "title": "QA: regression check that translations stay beside their originals after a pause (#312)",
+  "branch": "qa/pause-pairs",
+  "updated": "2026-09-30 16:32 UTC"
+}
