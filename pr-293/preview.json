@@ -1,0 +1,7 @@
+{
+  "number": 293,
+  "commit": "2bbce7e99fafc728623214d2601114e79744132a",
+  "title": "Mobile: drop the Android media playback service and unused permissions",
+  "branch": "claude/mobile-android-manifest",
+  "updated": "2026-09-30 10:42 UTC"
+}
