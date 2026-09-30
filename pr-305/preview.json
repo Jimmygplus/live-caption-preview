@@ -1,7 +1,7 @@
 {
   "number": 305,
-  "commit": "9834ed9672fb4e8d146ebee246fc8472cf2b54cc",
-  "title": "Home loads only what it shows: dialogs, screens and recognisers split out (#289)",
+  "commit": "7d879172d027e532f03e8d53e6afbabfdb7fb9e1",
+  "title": "Home loads only what it shows, with a safe fallback when a part fails to load (#289)",
   "branch": "claude/split-bundle",
-  "updated": "2026-09-30 14:55 UTC"
+  "updated": "2026-09-30 15:11 UTC"
 }
