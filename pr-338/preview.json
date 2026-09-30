@@ -1,7 +1,0 @@
-{
-  "number": 338,
-  "commit": "a2bb5a6b4c7bbdad247782674ff4e150ef33d9a2",
-  "title": "Skip /v1/account/me when there is no account token",
-  "branch": "claude/account-me-no-token",
-  "updated": "2026-09-30 19:36 UTC"
-}
