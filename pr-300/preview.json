@@ -1,7 +1,0 @@
-{
-  "number": 300,
-  "commit": "897295ab65b9e4106578f6994ccfffa456318047",
-  "title": "Mobile: show the unfinished caption tail faint only, without an underline",
-  "branch": "claude/mobile-caption-tail",
-  "updated": "2026-09-30 12:26 UTC"
-}
