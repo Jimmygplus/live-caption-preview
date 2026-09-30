@@ -1,7 +1,7 @@
 {
   "number": 253,
-  "commit": "2212bf2ef627f40c788ebea7e3668781fd540265",
+  "commit": "6c2f53fa95bb81583a7b5b8b4511a63c5056959a",
   "title": "Mobile: after a drop, carry the same trial on by itself (broker resume, #247)",
   "branch": "claude/mobile-auto-resume",
-  "updated": "2026-09-30 05:43 UTC"
+  "updated": "2026-09-30 05:50 UTC"
 }
