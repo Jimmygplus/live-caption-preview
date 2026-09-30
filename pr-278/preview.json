@@ -1,7 +1,0 @@
-{
-  "number": 278,
-  "commit": "f0d4cadcf8e92960802c363970c31dc6ff6d539d",
-  "title": "QA: live retest of #231 (two-way participant line order), run on Actions by label",
-  "branch": "qa/live-231",
-  "updated": "2026-09-30 10:08 UTC"
-}
