@@ -1,7 +1,0 @@
-{
-  "number": 279,
-  "commit": "625cdc90e31ec3be126747a3863c56eb59c0c270",
-  "title": "Trial broker docs: read-only query for today's trial pool usage",
-  "branch": "claude/trial-usage-query",
-  "updated": "2026-09-30 10:08 UTC"
-}
