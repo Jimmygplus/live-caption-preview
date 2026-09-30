@@ -1,6 +1,6 @@
 {
   "number": 229,
-  "commit": "8636fe535011c1c71880ca437feee07eb74350b3",
+  "commit": "c5f490283a07773efebcbce052a4958629652a06",
   "title": "Read captions side by side on wide screens (#210)",
   "branch": "claude/side-by-side",
   "updated": "2026-09-30 00:28 UTC"
