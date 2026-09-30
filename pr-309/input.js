@@ -2,9 +2,9 @@ import {
   decryptAudiencePayload,
   encryptAudiencePayload,
   hashAudienceToken,
-} from './audience-crypto.js?v=f79e7ad6';
-import { AUDIENCE_RELAY_URL } from './relay-config.js?v=f79e7ad6';
-import { isNewerCaptionRevision } from './caption-state.js?v=f79e7ad6';
+} from './audience-crypto.js?v=e723a7c1';
+import { AUDIENCE_RELAY_URL } from './relay-config.js?v=e723a7c1';
+import { isNewerCaptionRevision } from './caption-state.js?v=e723a7c1';
 
 const form = document.querySelector('#messageForm');
 const nameInput = document.querySelector('#name');
