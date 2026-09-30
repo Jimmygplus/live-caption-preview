@@ -1,7 +1,0 @@
-{
-  "number": 313,
-  "commit": "39e05018d47191508e1f240a7713e6c7945612d1",
-  "title": "Hide the language tag in every layout; keep it for screen readers (decision 22)",
-  "branch": "claude/no-language-tag",
-  "updated": "2026-09-30 15:03 UTC"
-}
