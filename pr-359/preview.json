@@ -1,0 +1,7 @@
+{
+  "number": 359,
+  "commit": "7a9959e631b6a370de8c6afcaf5d77ad89c73545",
+  "title": "Room details on a phone: the invite link no longer reads \"h\u2026\" (#353)",
+  "branch": "web/room-link-width",
+  "updated": "2026-10-01 06:37 UTC"
+}
