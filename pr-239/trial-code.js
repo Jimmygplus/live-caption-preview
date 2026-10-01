@@ -32,6 +32,12 @@ export async function startFreeTrial({ brokerUrl, fetchImpl = fetch }) {
   return requestTrial(brokerUrl, 'start', {}, fetchImpl);
 }
 
+// A new key for the rest of a trial whose connection dropped (#247). The
+// resume token came with the trial's start and is kept only in memory.
+export async function resumeTrial({ brokerUrl, resumeToken, fetchImpl = fetch }) {
+  return requestTrial(brokerUrl, 'resume', { resume_token: resumeToken }, fetchImpl);
+}
+
 async function requestTrial(brokerUrl, action, payload, fetchImpl) {
   if (!brokerUrl) throw new Error('The free trial is not configured.');
   let response;
@@ -46,7 +52,15 @@ async function requestTrial(brokerUrl, action, payload, fetchImpl) {
     throw new Error('Could not reach the trial service. Check your connection and try again. No API key is needed for a trial.');
   }
   const body = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(body.error || `Trial redemption failed (${response.status})`);
+  if (!response.ok) {
+    // The service's code (trial_over, resume_limit, resume_too_soon…) rides
+    // along, so a caller can tell a refusal from a fault.
+    const error = new Error(body.error || `Trial redemption failed (${response.status})`);
+    if (typeof body.code === 'string') error.code = body.code;
+    const retryAfter = Number(response.headers?.get?.('retry-after'));
+    if (retryAfter > 0) error.retryAfterMs = retryAfter * 1000;
+    throw error;
+  }
   if (!/^(?:temp:|snx_temp_)[^\s]{10,}$/.test(body.api_key || '')) {
     throw new Error('The trial service did not return a valid temporary key.');
   }
