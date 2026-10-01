@@ -161,7 +161,7 @@ const INK = '#1f2328';
 const TEAL = '#097981';
 // Each dot is a zero-length stroke with round caps: a circle of radius DOT,
 // about a fifth of the size of drawing every circle as arcs.
-const DOT = 0.48;
+const DOT = 0.5;
 const FINDERS = [[0, 0], [SIZE - 7, 0], [0, SIZE - 7]];
 const ALIGNMENT = [30, 30];
 
