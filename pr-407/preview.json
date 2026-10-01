@@ -1,7 +1,7 @@
 {
   "number": 407,
-  "commit": "f3e33657615ceabccdcb614f2ca385d983de293a",
+  "commit": "fb2598921d27e0bf1e750524a0d43792d81479c1",
   "title": "[throwaway, do not merge] Production smoke on capsie.io after ed95aa4",
   "branch": "qa/prod-smoke-1001",
-  "updated": "2026-10-01 12:27 UTC"
+  "updated": "2026-10-01 12:37 UTC"
 }
