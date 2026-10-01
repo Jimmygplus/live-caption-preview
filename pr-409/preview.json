@@ -1,7 +1,0 @@
-{
-  "number": 409,
-  "commit": "4539b8cc4c004eb0e766963c60ba3f369508d4af",
-  "title": "Mobile: declare the feedback form's data in the iOS privacy manifest (App Privacy B, #405)",
-  "branch": "claude/mobile-privacy-manifest",
-  "updated": "2026-10-01 12:59 UTC"
-}
