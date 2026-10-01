@@ -1,7 +1,0 @@
-{
-  "number": 352,
-  "commit": "64838daffdf61418e5c8067cadea42ab40202b8d",
-  "title": "Captions: a full stop after a comma replaces it (\"Well,.\" bug)",
-  "branch": "web/fix-double-punct",
-  "updated": "2026-10-01 06:21 UTC"
-}
