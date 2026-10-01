@@ -1,7 +1,0 @@
-{
-  "number": 415,
-  "commit": "efd3f84d99441992546f51964b9f43a82ffab3c4",
-  "title": "Release Start at the 4.5 s ceiling even when the timer fires early",
-  "branch": "web-load-experience",
-  "updated": "2026-10-01 15:36 UTC"
-}
