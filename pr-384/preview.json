@@ -1,0 +1,7 @@
+{
+  "number": 384,
+  "commit": "40ca154696729f0cb8558ec9f5b24d16a173c832",
+  "title": "Mobile: catch remaining rejections on leaving a screen; register X5; fix QR test after #367",
+  "branch": "claude/mobile-unmount-audit",
+  "updated": "2026-10-01 07:25 UTC"
+}
