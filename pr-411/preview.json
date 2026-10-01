@@ -1,7 +1,7 @@
 {
   "number": 411,
-  "commit": "36668f2b91f6826b106913250b24c300ccd51021",
+  "commit": "ab10ff3ea7d5be2f398f271033e79657cc122e75",
   "title": "Room details: keep what is needed now, fold the rest into About",
   "branch": "web-interaction/room-details-392",
-  "updated": "2026-10-01 16:05 UTC"
+  "updated": "2026-10-01 17:39 UTC"
 }
