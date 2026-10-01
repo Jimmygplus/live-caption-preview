@@ -1,7 +1,7 @@
 {
   "number": 356,
-  "commit": "d615b6dae54854cf7b115e5902f3d2be7a056696",
+  "commit": "137c4fea7d7df907592ab8f8ea4a79fa9f84c06a",
   "title": "Fold the side panel in the same frame captions start, with one scene fade",
   "branch": "web-interaction/seamless-panel-fold",
-  "updated": "2026-10-01 06:52 UTC"
+  "updated": "2026-10-01 07:16 UTC"
 }
