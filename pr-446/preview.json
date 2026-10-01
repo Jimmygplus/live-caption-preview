@@ -1,0 +1,7 @@
+{
+  "number": 446,
+  "commit": "ba0a5414355ea8c28f2e1618d7d54f6eca794ccc",
+  "title": "Check the feedback dispatch token without showing it; trim it in the Worker",
+  "branch": "claude/dispatch-token-check",
+  "updated": "2026-10-01 18:15 UTC"
+}
