@@ -1,7 +1,7 @@
 {
   "number": 399,
-  "commit": "5a241226bc83c654e91576577fde3fc81d04082e",
+  "commit": "a5a627216bdcaf4a27a5b0dde5a9be4d40a75a11",
   "title": "Load Home without a white page; Start waits until ready; first-run tips",
   "branch": "web-load-experience",
-  "updated": "2026-10-01 12:20 UTC"
+  "updated": "2026-10-01 12:30 UTC"
 }
