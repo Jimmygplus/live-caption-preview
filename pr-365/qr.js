@@ -151,17 +151,53 @@ function buildMatrix(codewords, mask = 0) {
   return modules;
 }
 
+// Style A (#348 B, decision 31): data modules are round dots, the three
+// finder patterns are rounded frames in the brand teal around a dark centre,
+// and the alignment pattern stays one solid rounded shape, never dots, since
+// readers locate the symbol by these. Dark on white in both themes, with a
+// quiet zone of 4 modules. Only the drawing changes; the encoding does not.
+const QUIET = 4;
+const INK = '#1f2328';
+const TEAL = '#097981';
+// Each dot is a zero-length stroke with round caps: a circle of radius DOT,
+// about a fifth of the size of drawing every circle as arcs.
+const DOT = 0.5;
+const FINDERS = [[0, 0], [SIZE - 7, 0], [0, SIZE - 7]];
+const ALIGNMENT = [30, 30];
+
+const n = (value) => Number(value.toFixed(3));
+// A rounded square as a path, clockwise, from its top-left corner.
+const rounded = (x, y, size, r) => {
+  const side = n(size - 2 * r);
+  return `M${n(x + r)},${n(y)}h${side}a${r},${r} 0 0 1 ${r},${r}v${side}a${r},${r} 0 0 1 -${r},${r}h-${side}a${r},${r} 0 0 1 -${r},-${r}v-${side}a${r},${r} 0 0 1 ${r},-${r}z`;
+};
+const insideFinder = (x, y) => FINDERS.some(([fx, fy]) => x >= fx && x < fx + 7 && y >= fy && y < fy + 7);
+const insideAlignment = (x, y) => Math.abs(x - ALIGNMENT[0]) <= 2 && Math.abs(y - ALIGNMENT[1]) <= 2;
+
 export function qrSvg(text) {
   const matrix = buildMatrix(encodePayload(text));
-  const quiet = 4;
-  const viewSize = SIZE + quiet * 2;
-  const path = [];
+  const viewSize = SIZE + QUIET * 2;
+  const dots = [];
   for (let y = 0; y < SIZE; y += 1) {
     for (let x = 0; x < SIZE; x += 1) {
-      if (matrix[y][x]) path.push(`M${x + quiet},${y + quiet}h1v1h-1z`);
+      if (!matrix[y][x] || insideFinder(x, y) || insideAlignment(x, y)) continue;
+      const cx = x + QUIET + 0.5;
+      const cy = y + QUIET + 0.5;
+      dots.push(`M${cx} ${cy}h0`);
     }
   }
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${viewSize} ${viewSize}" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="#fff"/><path d="${path.join('')}" fill="#000"/></svg>`;
+  const shapes = [];
+  for (const [fx, fy] of FINDERS) {
+    const x = fx + QUIET;
+    const y = fy + QUIET;
+    shapes.push(`<path fill-rule="evenodd" fill="${TEAL}" d="${rounded(x, y, 7, 1.6)}${rounded(x + 1, y + 1, 5, 0.6)}"/>`);
+    shapes.push(`<path fill="${INK}" d="${rounded(x + 2, y + 2, 3, 0.8)}"/>`);
+  }
+  const ax = ALIGNMENT[0] - 2 + QUIET;
+  const ay = ALIGNMENT[1] - 2 + QUIET;
+  shapes.push(`<path fill-rule="evenodd" fill="${INK}" d="${rounded(ax, ay, 5, 1.2)}${rounded(ax + 1, ay + 1, 3, 0.6)}"/>`);
+  shapes.push(`<circle cx="${ax + 2.5}" cy="${ay + 2.5}" r="0.5" fill="${INK}"/>`);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${viewSize} ${viewSize}"><rect width="100%" height="100%" fill="#fff"/><path d="${dots.join('')}" fill="none" stroke="${INK}" stroke-width="${DOT * 2}" stroke-linecap="round"/>${shapes.join('')}</svg>`;
 }
 
 export function qrDataUrl(text) {
