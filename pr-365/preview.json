@@ -1,7 +1,7 @@
 {
   "number": 365,
-  "commit": "778c1cc3738f15168224c2fceac74ef33e7086ea",
+  "commit": "773f647ada0d3537ad9030b906e2304683057990",
   "title": "Mobile: in-app feedback with an opt-in screenshot and the shared diagnostic log (#358 A)",
   "branch": "feedback/app-in-app",
-  "updated": "2026-10-01 07:27 UTC"
+  "updated": "2026-10-01 10:40 UTC"
 }
