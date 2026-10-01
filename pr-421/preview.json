@@ -1,0 +1,7 @@
+{
+  "number": 421,
+  "commit": "f5a730346dcbdf1ee42bc91cd0b21c005713f65c",
+  "title": "Feedback screenshot: draw again until Safari's engine has painted it (#408)",
+  "branch": "feedback/webkit-blank-408",
+  "updated": "2026-10-01 15:46 UTC"
+}
