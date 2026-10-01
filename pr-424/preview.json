@@ -1,7 +1,7 @@
 {
   "number": 424,
-  "commit": "ec658dc6013fe648b7f24e6381b35b0085afb689",
+  "commit": "87f246226ef28999da686cb83d4eeeb7c6d0f6ca",
   "title": "Web: use the Workers' capsie.io names (#419, step 2)",
   "branch": "web/china-clients-419",
-  "updated": "2026-10-01 15:54 UTC"
+  "updated": "2026-10-01 16:07 UTC"
 }
