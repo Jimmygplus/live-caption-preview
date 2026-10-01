@@ -1,7 +1,7 @@
 {
   "number": 439,
-  "commit": "ca63e384b00919c09c089e816bb2128050c40591",
-  "title": "Fold-phone outer screens: keep the participant header compact (#419)",
+  "commit": "4c14918137476e213f81e26efc2717c6fd26593e",
+  "title": "Every screen shape: compact participant header on fold-phone outer screens, layout check for all shapes (#419)",
   "branch": "web-interaction/narrow-fold-419",
-  "updated": "2026-10-01 16:13 UTC"
+  "updated": "2026-10-01 17:42 UTC"
 }
