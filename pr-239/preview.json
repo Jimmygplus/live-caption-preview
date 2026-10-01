@@ -1,7 +1,7 @@
 {
   "number": 239,
-  "commit": "a7dc5be4109e77e9c43235f7b43f5f29a9f92367",
-  "title": "Send sign-in email from RoomCaption <sign-in@roomcaption.com>",
+  "commit": "224037ece678b9ad1592bffdba303102293e8d44",
+  "title": "Send sign-in email from Capsie <sign-in@capsie.io>",
   "branch": "claude/mail-from-roomcaption",
-  "updated": "2026-10-01 05:42 UTC"
+  "updated": "2026-10-01 05:45 UTC"
 }
