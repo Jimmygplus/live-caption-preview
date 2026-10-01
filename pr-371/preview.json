@@ -1,7 +1,0 @@
-{
-  "number": 371,
-  "commit": "ff69d0279c178ed2b6f520c90e020bf1121beaf7",
-  "title": "Mobile: fix the crash on leaving the host screen, and keep crash reports (#366)",
-  "branch": "claude/mobile-crash-366",
-  "updated": "2026-10-01 06:58 UTC"
-}
