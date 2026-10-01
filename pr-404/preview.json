@@ -1,0 +1,7 @@
+{
+  "number": 404,
+  "commit": "cfb995919c0215eb1f5187e58e0eb73021adb6f2",
+  "title": "Release: accept next/licenses.txt when checking the live site",
+  "branch": "fix/release-licenses",
+  "updated": "2026-10-01 12:06 UTC"
+}
