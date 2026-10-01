@@ -1,7 +1,7 @@
 {
   "number": 342,
-  "commit": "ef99ae1e0d40cf685475e803f31d6d3f454bf0f2",
+  "commit": "54c15194bf66f8e6ead61e07cd29f8b73eeafc19",
   "title": "Make capsie.io the main site; roomcaption.com redirects to it",
   "branch": "claude/capsie-primary",
-  "updated": "2026-10-01 02:29 UTC"
+  "updated": "2026-10-01 02:31 UTC"
 }
