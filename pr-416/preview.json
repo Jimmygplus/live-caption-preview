@@ -1,7 +1,7 @@
 {
   "number": 416,
-  "commit": "c512ccd10d879f7e95541f04b5a107ea4588d5e2",
+  "commit": "ef5d56f8a7c1bb2da1af3238b1df5e9b86247191",
   "title": "Settings rows, motion b and a time beside every sentence (#351)",
   "branch": "web-interaction/351-panel-motion-time",
-  "updated": "2026-10-01 17:08 UTC"
+  "updated": "2026-10-01 17:40 UTC"
 }
