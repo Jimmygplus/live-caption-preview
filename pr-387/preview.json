@@ -1,7 +1,7 @@
 {
   "number": 387,
-  "commit": "1429e91cd87d267f0d77e1fafad4bc15fd492fa1",
+  "commit": "4366929f3b41cdd10dc7bbc27a31ababc263b9f3",
   "title": "Captions: short sentences join the next; each starts at its own first word (#375)",
   "branch": "web/caption-cuts-375",
-  "updated": "2026-10-01 10:51 UTC"
+  "updated": "2026-10-01 10:52 UTC"
 }
