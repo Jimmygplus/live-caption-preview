@@ -1,0 +1,7 @@
+{
+  "number": 394,
+  "commit": "89c2bb880844181b2aec233af2f10f10e88576da",
+  "title": "Caption fonts: warm slice 112; load the Latin slice through its face, not a preload",
+  "branch": "web/font-tuning",
+  "updated": "2026-10-01 11:33 UTC"
+}
