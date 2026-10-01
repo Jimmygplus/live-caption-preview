@@ -1,0 +1,7 @@
+{
+  "number": 400,
+  "commit": "f3f4c922435704a44423b6d46d98f59fc28c7f9e",
+  "title": "Deploy: install dependencies before building the Workers (production stuck since 10:56 UTC)",
+  "branch": "fix/deploy-workers-install",
+  "updated": "2026-10-01 11:48 UTC"
+}
