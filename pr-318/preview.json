@@ -1,7 +1,7 @@
 {
   "number": 318,
-  "commit": "8bb069f9612feb81c1dc0121098fbd103dfa1e38",
+  "commit": "d856dbcf0a9a39ec5a79535524bedf557bbe0ad5",
   "title": "Core: share the language settings between the web and the apps (#310)",
   "branch": "claude/core-language-config",
-  "updated": "2026-09-30 19:18 UTC"
+  "updated": "2026-10-02 07:30 UTC"
 }
