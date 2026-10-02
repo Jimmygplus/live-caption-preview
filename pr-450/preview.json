@@ -1,7 +1,7 @@
 {
   "number": 450,
-  "commit": "a62cb3afd2fa71fcb62fce1661ee6e8167cb7686",
+  "commit": "ce314395c9c0537949afe36cc06a6880aa3dd5b4",
   "title": "Mobile: wait and retry when the speech service is full (#95, for 1.0.1)",
   "branch": "claude/concurrency-app",
-  "updated": "2026-10-02 01:18 UTC"
+  "updated": "2026-10-02 01:51 UTC"
 }
