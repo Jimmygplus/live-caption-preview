@@ -1,7 +1,0 @@
-{
-  "number": 466,
-  "commit": "668c06ced77b273735281ecfd66fb43045477941",
-  "title": "core: break paragraphs only after the end of a sentence (#418)",
-  "branch": "web/paragraph-sentence-end-418",
-  "updated": "2026-10-02 08:50 UTC"
-}
