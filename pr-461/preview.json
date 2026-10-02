@@ -1,7 +1,7 @@
 {
   "number": 461,
-  "commit": "dd029f973d070368da29e3ed64cefc62eb501c86",
+  "commit": "d2834809fd5bff93083eea44f84904c123d7eca0",
   "title": "Mobile: save, export and delete the conversation's transcript (R1, R2, R5)",
   "branch": "claude/mobile-transcript-main",
-  "updated": "2026-10-02 07:48 UTC"
+  "updated": "2026-10-02 07:57 UTC"
 }
