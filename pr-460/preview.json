@@ -1,7 +1,7 @@
 {
   "number": 460,
-  "commit": "0b35c7d3a9b3132ae65fd99de213ab71c2310415",
+  "commit": "28056858707d3278c6a2207231a53f162fa02823",
   "title": "Agents: push in batches and keep drafts cheap on Actions minutes",
   "branch": "docs/actions-minutes-rules",
-  "updated": "2026-10-02 07:38 UTC"
+  "updated": "2026-10-02 07:43 UTC"
 }
