@@ -1,7 +1,7 @@
 {
   "number": 470,
-  "commit": "2332ea16cd396c8e2b2fdfdf2474ccb5c9244c30",
+  "commit": "83400a501aa80ca74e01e9c38135c98089eeb51d",
   "title": "Mobile: screen-reader pass (VoiceOver, TalkBack), for 1.0.1",
   "branch": "claude/mobile-a11y",
-  "updated": "2026-10-02 10:35 UTC"
+  "updated": "2026-10-02 10:46 UTC"
 }
