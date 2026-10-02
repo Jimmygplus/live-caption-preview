@@ -1,7 +1,7 @@
 {
   "number": 449,
-  "commit": "d3963afa2443d255168bb0f70d9d4238e7f79931",
+  "commit": "40274b3c4ddddeb069215b037132347dc55efe37",
   "title": "Trial Worker: keep speech-service connections free for signed-in use (#95)",
   "branch": "claude/concurrency-guard",
-  "updated": "2026-10-02 01:09 UTC"
+  "updated": "2026-10-02 01:15 UTC"
 }
