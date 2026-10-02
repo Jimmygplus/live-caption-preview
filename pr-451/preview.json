@@ -1,0 +1,7 @@
+{
+  "number": 451,
+  "commit": "434ab73eca66eb9df4130e8756afed3735a9e667",
+  "title": "Signed-in time: take no block while the speech service is full (#95)",
+  "branch": "claude/grant-busy",
+  "updated": "2026-10-02 01:48 UTC"
+}
