@@ -1,0 +1,7 @@
+{
+  "number": 525,
+  "commit": "6ca0d610b5c6afd8c391151c330ba5db948cf026",
+  "title": "Prevent late native socket events from reviving stopped capture",
+  "branch": "codex/mobile-capture-close-2026-10-06",
+  "updated": "2026-10-05 17:02 UTC"
+}
