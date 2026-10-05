@@ -1,0 +1,7 @@
+{
+  "number": 486,
+  "commit": "fd95604b53c95961c5d82a46a92e5476e33137b7",
+  "title": "Add read-only account platform preflight and readiness evidence",
+  "branch": "codex/platform-readiness-2026-10-05",
+  "updated": "2026-10-05 09:30 UTC"
+}

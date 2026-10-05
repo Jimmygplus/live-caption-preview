@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="robots" content="noindex" /><script>/* Preview of pull request #486: its saved data stays apart from the published pages. */(()=>{const p="lc-pr-486:",s=Storage.prototype,g=s.getItem,t=s.setItem,r=s.removeItem;s.getItem=function(k){return g.call(this,p+k)};s.setItem=function(k,v){return t.call(this,p+k,v)};s.removeItem=function(k){return r.call(this,p+k)}})();</script><script>addEventListener("DOMContentLoaded",()=>{const b=document.createElement("div");b.textContent="Preview · PR #486 · fd95604b";b.setAttribute("aria-hidden","true");b.style.cssText="position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:2147483647;padding:1px 8px;border-radius:0 0 6px 6px;background:#6b4a12;color:#fff;white-space:nowrap;font:600 10px/1.5 system-ui,sans-serif;pointer-events:none;opacity:.9";document.body.append(b)});</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Live Caption – shared live captions and translation</title>
+<meta name="description" content="Turn a conversation into live captions everyone can read on their own phone, with translation and typed replies. Runs in the browser; try it free." />
+<link rel="canonical" href="https://jimmygplus.github.io/live-caption/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Live Caption" />
+<meta property="og:title" content="Live Caption – shared live captions and translation" />
+<meta property="og:description" content="Turn a conversation into live captions everyone can read on their own phone, with translation and typed replies. Runs in the browser; try it free." />
+<meta property="og:url" content="https://jimmygplus.github.io/live-caption/" />
+<meta property="og:locale" content="en_AU" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Live Caption – shared live captions and translation" />
+<meta name="twitter:description" content="Turn a conversation into live captions everyone can read on their own phone, with translation and typed replies. Runs in the browser; try it free." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Live Caption",
+  "url": "https://jimmygplus.github.io/live-caption/",
+  "description": "Turn a conversation into live captions everyone can read on their own phone, with translation and typed replies. Runs in the browser; try it free.",
+  "applicationCategory": "CommunicationApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires a modern browser with microphone access",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD", "description": "Free trial session" }
+}
+</script>
+<link rel="stylesheet" href="./v2.css?v=fd95604b" />
+<script>
+  // Runs before first paint so the saved theme never flashes the wrong palette.
+  (function () {
+    var saved = localStorage.getItem('lc.theme') || 'system';
+    var dark = saved === 'system'
+      ? matchMedia('(prefers-color-scheme: dark)').matches
+      : saved === 'dark';
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  })();
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>" />
+</head>
+<body data-state="idle" class="console-collapsed">
+
+<!-- Identity and the things you reach for regardless of whether a session is
+     running. Everything session-shaped lives in the console below the stage. -->
+<header class="topbar">
+  <div class="brand">
+    <span class="dot" id="statusDot" aria-hidden="true"></span>
+    <strong>Live Caption</strong>
+  </div>
+
+  <!-- Stays put for the whole session. Someone arriving late has to be able to
+       join without the host interrupting the meeting to dig out a dialog, and
+       that is most true in theatre mode — which is exactly when it is projected
+       to a room. -->
+  <button id="pairingChip" class="pairing-chip" type="button" hidden
+    title="Valid for this conversation. Click to replace the code; existing participants stay connected.">
+    <span class="pairing-label">Join code</span>
+    <strong id="pairingCode" class="mono"></strong>
+  </button>
+
+  <div class="topbar-actions">
+    <button id="audienceBtn" class="chip-btn" type="button" title="Share captions and invite typed replies">
+      <span class="ico" aria-hidden="true">◉</span><span class="lbl">Share captions</span>
+    </button>
+    <button id="settingsBtn" class="chip-btn" type="button" aria-controls="settingsPanel" aria-expanded="false">
+      <span class="ico" aria-hidden="true">☰</span><span class="lbl">Settings</span>
+    </button>
+    <button id="termsBtn" class="chip-btn" type="button" title="Names, vocabulary and conversation context">
+      <span class="ico" aria-hidden="true">▤</span><span class="lbl">Custom words</span>
+    </button>
+    <button id="keysBtn" class="chip-btn" type="button" hidden title="Trial code or your own API keys">
+      <span class="ico" aria-hidden="true">🔑</span><span class="lbl">API keys</span>
+    </button>
+    <button id="themeBtn" class="chip-btn" type="button" title="Theme: system, light or dark">
+      <span class="ico" id="themeIcon" aria-hidden="true">🖥</span><span class="lbl" id="themeLabel">Theme: System</span>
+    </button>
+    <button id="trialBtn" class="chip-btn trial-cta" type="button" hidden>
+      <span class="lbl">Try free · 30 min</span>
+    </button>
+  </div>
+</header>
+
+<button id="theaterExit" type="button" hidden title="Exit fullscreen (Esc)">✕ Exit fullscreen</button>
+
+<main id="stage" aria-label="Conversation captions" tabindex="0">
+  <div id="notice" class="notice" hidden>
+    <span id="noticeText"></span>
+    <button type="button" id="noticeAction" class="notice-action"></button>
+    <button type="button" id="noticeDismiss" class="notice-dismiss" title="Dismiss">✕</button>
+  </div>
+
+  <div class="caption-flow">
+  <ol id="captions"></ol>
+
+  <div id="live" class="segment live" hidden>
+    <p class="meta" id="liveMeta">
+      <span class="timestamp mono" id="liveTimestamp"></span><span class="identity" id="liveIdentity"></span>
+    </p>
+    <p class="original" id="liveOriginal"><span id="liveStableOriginal"></span><span id="liveChangingOriginal" class="changing"></span></p>
+    <p class="translation" id="liveTranslation"><span id="liveStableTranslation"></span><span id="liveChangingTranslation" class="changing"></span></p>
+  </div>
+
+  </div>
+
+  <button id="jumpBtn" class="jump" type="button" hidden>
+    <span id="jumpLabel">Back to latest</span> ↓
+  </button>
+
+  <div id="placeholder" class="placeholder">
+    <h1>Follow the conversation.</h1>
+    <p id="placeholderHint">Read spoken English as live captions. Choose your audio, then start.</p>
+  </div>
+</main>
+
+<!-- Typed contributions get their own strip rather than scrolling past in the
+     caption stream. A room looking at this screen needs to know a participant
+     just said something, and needs it to stay put long enough to be read. -->
+<section id="typedDock" class="typed-dock" aria-live="polite" aria-label="Typed replies" hidden></section>
+
+<div id="sheetScrim" class="scrim" hidden></div>
+
+<!-- Keep session essentials visible; the topbar opens additional settings. -->
+<!-- Two different people open this page: one to host, one because they were
+     told six digits. The join path has to be visible on arrival, not filed
+     behind a menu — but it stays a single line so it never competes with the
+     setup the host uses every time. -->
+<form id="joinBar" class="join-bar">
+  <label for="joinCode">Join a conversation</label>
+  <input id="joinCode" type="text" inputmode="numeric" autocomplete="one-time-code"
+    maxlength="7" pattern="[0-9 ]*" placeholder="6-digit join code" aria-describedby="joinStatus" />
+  <button id="joinBtn" class="ghost" type="submit">Join</button>
+  <span id="joinStatus" class="join-status" role="status" aria-live="polite"></span>
+</form>
+
+<section class="console" aria-label="Session settings and controls">
+
+  <!-- On a phone the sheet covers the button that opened it, so it needs a
+       close control of its own. app.js wires this up only when it exists. -->
+  <button id="sheetClose" class="sheet-close" type="button">Done</button>
+
+  <div id="controls" class="setup">
+    <div class="setup-groups">
+
+      <fieldset class="group group-audio">
+        <legend><span class="step">1</span>Audio source</legend>
+        <div class="row">
+          <div class="field grow">
+            <label for="device">Input</label>
+            <select id="device">
+              <option value="">Default microphone</option>
+              <option value="display">Tab / system audio</option>
+            </select>
+          </div>
+          <button id="audioCheckBtn" class="ghost" type="button" title="Check your microphone and background noise">
+            <span class="ico" aria-hidden="true">🎙</span><span class="lbl">Audio check</span>
+          </button>
+        </div>
+        <p class="group-hint" id="audioHint">
+          For online meetings, choose tab / system audio and enable <strong>Share audio</strong> in the browser prompt.
+        </p>
+      </fieldset>
+
+      <fieldset class="group group-lang">
+        <legend><span class="step">2</span>Caption mode</legend>
+        <div class="row">
+          <div class="field">
+            <label for="mode">Mode</label>
+            <select id="mode">
+              <option value="captions" selected>English captions</option>
+              <option value="english">Translate speech to English</option>
+              <option value="one_way">Other translation</option>
+              <option value="two_way">Two-way conversation</option>
+            </select>
+          </div>
+          <div class="field grow">
+            <label for="sourceLang" id="sourceLabel">Spoken language</label>
+            <select id="sourceLang"></select>
+          </div>
+          <button id="swapBtn" class="ghost icon-only swap" type="button" title="Swap spoken and reading languages">
+            <span class="ico" aria-hidden="true">⇄</span><span class="lbl sr-only">Swap</span>
+          </button>
+          <div class="field grow">
+            <label for="targetLang" id="targetLabel">Translation</label>
+            <select id="targetLang"></select>
+          </div>
+        </div>
+      </fieldset>
+
+      <div id="settingsPanel" class="settings-panel" hidden>
+        <fieldset class="group group-engine">
+          <legend>Caption engine</legend>
+          <div class="row">
+            <div class="field grow">
+              <label for="engine">Recognition</label>
+              <select id="engine"></select>
+            </div>
+            <div class="field grow">
+              <label for="translator">Translation</label>
+              <select id="translator"></select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="group group-display">
+          <legend>Display options</legend>
+          <div class="row">
+            <div class="field">
+              <label for="length">Caption length</label>
+              <select id="length">
+                <option value="short" selected>Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="view">View</label>
+              <select id="view">
+                <option value="list" selected>Conversation</option>
+                <option value="cinema">Cinema</option>
+                <option value="ticker">Ticker</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Only meaningful once captions are flowing; collapsed away while idle. -->
+  <div class="live-tools">
+    <div class="tool-cluster type-size">
+      <div class="field compact">
+        <label for="origFontSize" title="Source text size">Source</label>
+        <input id="origFontSize" type="range" min="16" max="96" step="2" value="42" />
+      </div>
+      <button id="fontLinkBtn" class="ghost icon-only font-link" type="button" aria-pressed="false"
+        aria-label="Link source and translation text sizes" title="Keep both text sizes in proportion">
+        <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9.5 14.5l5-5M7.2 16.8l-1 1a3.4 3.4 0 0 1-4.8-4.8l3.1-3.1a3.4 3.4 0 0 1 4.8 0M16.8 7.2l1-1a3.4 3.4 0 0 1 4.8 4.8l-3.1 3.1a3.4 3.4 0 0 1-4.8 0"></path>
+        </svg><span class="lbl sr-only">Link</span>
+      </button>
+      <div class="field compact">
+        <label for="fontSize" title="Translation text size">Translation</label>
+        <input id="fontSize" type="range" min="16" max="96" step="2" value="42" />
+      </div>
+    </div>
+
+    <div class="tool-cluster">
+      <button id="lockBtn" class="ghost" type="button" aria-pressed="true" title="Follow the latest captions. Scroll up to read earlier lines.">
+        <span class="ico" aria-hidden="true">📌</span><span class="lbl">Follow</span>
+      </button>
+      <button id="timestampsBtn" class="ghost" type="button" aria-pressed="false" title="Show timestamps">
+        <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.5"></circle>
+          <path d="M12 7.5v5l3.5 2"></path>
+        </svg><span class="lbl">Time</span>
+      </button>
+      <button id="typedSoundBtn" class="ghost" type="button" aria-pressed="true"
+        title="Play a sound when someone sends a typed reply">
+        <span class="ico" aria-hidden="true">🔔</span><span class="lbl">Reply sound</span>
+      </button>
+      <button id="pipBtn" class="ghost" type="button" hidden title="Open captions in an always-on-top window">
+        <span class="ico" aria-hidden="true">⧉</span><span class="lbl">Float</span>
+      </button>
+      <button id="theaterBtn" class="ghost" type="button" aria-pressed="false" title="Fullscreen captions (Esc to exit)">
+        <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M8.5 4H4v4.5M15.5 4H20v4.5M20 15.5V20h-4.5M8.5 20H4v-4.5"></path>
+        </svg><span class="lbl">Fullscreen</span>
+      </button>
+
+      <details class="menu" id="exportMenu">
+        <summary class="ghost" title="Export transcript or check services">
+          <span class="ico" aria-hidden="true">⬇</span><span class="lbl">Export</span>
+        </summary>
+        <div class="menu-items">
+          <button type="button" data-export="selftest">Service check</button>
+          <button type="button" data-export="copy">Copy transcript</button>
+          <button type="button" data-export="txt">Download text (.txt)</button>
+          <button type="button" data-export="md">Download Markdown (.md)</button>
+          <button type="button" data-export="srt">Download subtitles (.srt)</button>
+          <button type="button" data-export="clear" class="danger">Clear transcript</button>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- The button starts in its slot. Rendering it elsewhere and letting JS move
+       it on load made every page load flash: it appeared full-width at the foot
+       of the page for a frame before jumping up here. -->
+  <div class="console-action" id="startHome">
+    <button id="startBtn" class="primary start" type="button">Start captions</button>
+  </div>
+</section>
+
+<nav id="mobileBar" class="mobile-bar" hidden>
+  <button id="sheetBtn" class="ghost" type="button">⚙ Settings</button>
+</nav>
+
+<footer class="statusbar" id="statusBar">
+  <span id="statusText" class="status-text">Ready</span>
+
+  <label class="signal-control" title="Input level and noise gate. Audio below the selected threshold is not sent for recognition.">
+    <span class="signal-name" id="signalName">Noise gate</span>
+    <span class="signal-track">
+      <span class="meter" aria-hidden="true"><i id="meterFill"></i></span>
+      <input id="gate" type="range" min="0" max="60" step="1" value="0"
+        aria-label="Noise gate" aria-describedby="audioLevelStatus" />
+    </span>
+    <span id="gateValue" class="mono">Off</span>
+  </label>
+
+  <span id="audioLevelStatus" class="audio-level-status" role="status" aria-live="polite">Not started</span>
+  <span class="spacer"></span>
+  <span id="translatorStatus" class="chip"></span>
+  <span id="counter" class="mono"></span>
+  <span id="clock" class="mono">00:00</span>
+  <span id="errorText" class="error"></span>
+</footer>
+
+
+<dialog id="termsDialog" class="sheet">
+  <form method="dialog">
+    <header class="sheet-head">
+      <h2>Vocabulary and context</h2>
+      <p class="hint">Add context for recognition and translation. Restart captions to apply changes.</p>
+    </header>
+
+    <div class="sheet-body">
+      <div class="field-block">
+        <label for="termsPack">Vocabulary pack<span class="hint-inline">Add more than one</span></label>
+        <p class="hint">Choose a vocabulary pack, then edit it for your conversation.</p>
+        <div class="terms-pack">
+          <select id="termsPack"><option value="">Choose a pack…</option></select>
+          <button type="button" id="termsClear" class="ghost">Clear all</button>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <label for="termsScene">Conversation context</label>
+        <p class="hint">Describe the topic in a sentence or two to help with terminology.</p>
+        <textarea id="termsScene" rows="2" placeholder="e.g. A product team reviewing a live captioning app with accessibility researchers."></textarea>
+      </div>
+
+      <div class="field-block">
+        <label for="termsWords">Recognition vocabulary<span class="hint-inline">One per line</span></label>
+        <p class="hint">Add product names, people, acronyms and words that are often misheard.</p>
+        <textarea id="termsWords" rows="5" placeholder="Live Caption&#10;Soniox&#10;PayID&#10;diarization"></textarea>
+      </div>
+
+      <div class="field-block">
+        <label for="termsPairs">Translation glossary<span class="hint-inline">One pair per line, separated by =</span></label>
+        <p class="hint">Specify how names and domain terms should be translated.</p>
+        <textarea id="termsPairs" rows="5" placeholder="réunion=meeting&#10;sous-titres=captions"></textarea>
+      </div>
+    </div>
+
+    <footer class="sheet-foot">
+      <span id="termsCount" class="hint"></span>
+      <span class="spacer"></span>
+      <button value="cancel" class="ghost" type="submit">Cancel</button>
+      <button value="save" id="termsSave" class="primary" type="submit">Save</button>
+    </footer>
+  </form>
+</dialog>
+
+<dialog id="keysDialog" class="sheet">
+  <form method="dialog">
+    <header class="sheet-head">
+      <h2>Set up live captions</h2>
+      <p class="hint">Start a free trial with one click. No Soniox account or API key needed.</p>
+    </header>
+
+    <div class="sheet-body">
+      <!-- Two genuine alternatives, presented as such rather than as one long
+           column the reader has to segment for themselves. -->
+      <section id="trialSection" class="path path-trial" hidden aria-labelledby="trialTitle">
+        <div class="path-head">
+          <span class="path-tag">Quick start</span>
+          <h3 id="trialTitle">Try free for 30 minutes</h3>
+        </div>
+        <p class="hint">We provide the Soniox access. Just allow your microphone and start speaking.</p>
+        <button id="trialStart" type="button" class="primary">Start free 30-minute trial</button>
+        <p id="trialLimits" class="hint">Each connection lasts up to 30 minutes; unused time is lost if you stop, refresh or disconnect. Daily trial limits apply.</p>
+        <section class="referral-option" aria-labelledby="referralTitle">
+        <h4 id="referralTitle">Have a referral code?</h4>
+        <p class="hint">Unrestricted codes remove session time and usage limits. Access is verified when you start.</p>
+        <label for="trialCode">Trial code<span class="hint-inline">Letters, numbers and hyphens</span></label>
+        <div class="trial-code-row">
+          <input id="trialCode" type="text" maxlength="32" autocomplete="off" autocapitalize="characters"
+            spellcheck="false" placeholder="e.g. LIVECAP2026" aria-describedby="trialStatus" />
+          <button id="trialApply" type="button" class="primary">Start with code</button>
+        </div>
+        </section>
+        <p id="trialStatus" class="hint" role="status" aria-live="polite"></p>
+      </section>
+
+      <details id="ownKeysSection" class="path path-byok">
+        <summary id="byokTitle">Already have an API key?</summary>
+        <div class="own-keys-fields">
+        <p class="hint">Keys are saved in this browser and sent <strong>directly to the provider</strong>. No Live Caption account is needed.</p>
+
+        <div class="field-block">
+          <label for="keySoniox">Soniox API key<span class="hint-inline">For Soniox captions</span></label>
+          <input id="keySoniox" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your Soniox API key" />
+          <p class="hint">
+            Visit <a href="https://console.soniox.com" target="_blank" rel="noopener noreferrer">console.soniox.com</a>
+            to create a key. Provider usage charges apply.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <label for="keyAnthropic">Claude API key<span class="hint-inline">Optional translation</span></label>
+          <input id="keyAnthropic" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your Anthropic API key (optional)" />
+          <p class="hint">
+            Visit <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer">console.anthropic.com</a>
+            to create a key. You can also use Soniox translation or captions only.
+          </p>
+        </div>
+        <div class="key-actions">
+          <button value="save" class="primary" type="submit">Save API keys</button>
+          <button type="button" id="keysClear" class="ghost danger">Clear keys</button>
+        </div>
+        </div>
+      </details>
+    </div>
+
+    <footer class="sheet-foot">
+      <span class="spacer"></span>
+      <button value="cancel" class="ghost" type="submit">Done</button>
+    </footer>
+  </form>
+</dialog>
+
+<dialog id="audienceDialog" class="sheet audience-dialog">
+  <form method="dialog">
+    <header class="sheet-head">
+      <h2>Share this conversation</h2>
+      <p class="hint">Scan to read captions or type a reply. Replies appear on every connected screen.</p>
+      <p class="hint" lang="en">For non-speaking, Deaf, and hard-of-hearing people.</p>
+    </header>
+
+    <div class="sheet-body">
+      <div id="audienceLoading" class="audience-loading">Creating a secure room…</div>
+      <div id="audienceSession" hidden>
+        <div class="audience-share">
+          <img id="audienceQr" class="audience-qr" alt="QR code to join this conversation" />
+          <div class="audience-share-text">
+            <p class="audience-room-code">Join code <strong id="audienceRoomCode" class="mono"></strong></p>
+            <label id="audienceUrlLabel" for="audienceUrl">Invite link</label>
+            <div class="audience-link">
+              <input id="audienceUrl" type="url" readonly />
+              <button id="audienceCopy" type="button" class="ghost">Copy</button>
+            </div>
+          </div>
+        </div>
+        <p id="audienceShortHint" class="hint">Opening the invite link joins straight away. People can also enter the join code on the home page.</p>
+        <p id="audienceHint" class="hint"></p>
+        <p id="audiencePrivacy" class="audience-private"></p>
+        
+      </div>
+    </div>
+
+    <footer class="sheet-foot">
+      <button id="audienceEnd" type="button" class="ghost danger" hidden>End room</button>
+      <span class="spacer"></span>
+      <button value="close" class="primary" type="submit">Done</button>
+    </footer>
+  </form>
+</dialog>
+
+<dialog id="audioCheckDialog" class="sheet audio-check-dialog" aria-labelledby="audioCheckTitle">
+  <form method="dialog">
+    <header class="sheet-head">
+      <h2 id="audioCheckTitle">Check your audio</h2>
+      <p class="hint">Stay quiet for 2.5 seconds, then say a sentence. This check measures levels on your device without recording or uploading audio.</p>
+    </header>
+
+    <div class="sheet-body">
+      <section class="audio-check-settings" aria-labelledby="audioCheckSettingsTitle">
+        <h3 id="audioCheckSettingsTitle">Input settings</h3>
+        <dl>
+          <div><dt>Input device</dt><dd id="audioCheckDevice">Default microphone</dd></div>
+          <div><dt>Processing</dt><dd>Raw audio · noise reduction, echo cancellation and auto gain off</dd></div>
+          <div><dt>Current gate</dt><dd id="audioCheckGate">Off (manual)</dd></div>
+        </dl>
+      </section>
+
+      <section id="audioCheckRun" class="audio-check-run" hidden aria-labelledby="audioCheckPhase">
+        <p id="audioCheckPhase" class="audio-check-phase" role="status" aria-live="polite">Ready to check</p>
+        <progress id="audioCheckProgress" max="6500" value="0" aria-label="Audio check progress"></progress>
+        <div class="audio-check-meter" aria-hidden="true"><i id="audioCheckMeterFill"></i></div>
+        <p id="audioCheckLive" class="hint">Stay quiet while we measure background noise.</p>
+      </section>
+
+      <section id="audioCheckResult" class="audio-check-result" hidden aria-labelledby="audioCheckSummary">
+        <h3 id="audioCheckSummary">Check complete</h3>
+        <div class="audio-check-reports">
+          <div><span>Speech level</span><strong id="audioCheckLevel">—</strong><small id="audioCheckLevelValue"></small></div>
+          <div><span>Background noise</span><strong id="audioCheckNoise">—</strong><small id="audioCheckNoiseValue"></small></div>
+          <div><span>Clipping</span><strong id="audioCheckClipping">—</strong><small id="audioCheckPeakValue"></small></div>
+          <div><span>Silence</span><strong id="audioCheckSilence">—</strong><small>Check that your input is available</small></div>
+        </div>
+        <p id="audioCheckGuidance" class="audio-check-guidance"></p>
+        <div class="audio-check-recommendation">
+          <span>Suggested noise gate</span>
+          <strong id="audioCheckRecommendation">—</strong>
+          <button id="audioCheckApply" type="button" class="ghost">Apply suggestion</button>
+        </div>
+        <p class="hint">Apply the suggestion if it helps. You can adjust or switch off the gate at any time.</p>
+      </section>
+
+      <p id="audioCheckError" class="error" role="alert"></p>
+    </div>
+
+    <footer class="sheet-foot">
+      <span class="spacer"></span>
+      <button value="close" class="ghost" type="submit">Close</button>
+      <button id="audioCheckStart" class="primary" type="button">Start check</button>
+    </footer>
+  </form>
+</dialog>
+
+<dialog id="captionEditDialog" class="sheet caption-edit-dialog" aria-labelledby="captionEditTitle">
+  <form id="captionEditForm" method="dialog">
+    <header class="sheet-head">
+      <h2 id="captionEditTitle">Edit caption</h2>
+      <p id="captionEditHint" class="hint"></p>
+    </header>
+
+    <div class="sheet-body">
+      <div class="field-block">
+        <label for="captionEditOriginal">Source</label>
+        <textarea id="captionEditOriginal" rows="4" maxlength="3000" required></textarea>
+      </div>
+      <div class="field-block">
+        <label for="captionEditTranslation">Translation<span class="hint-inline">Optional</span></label>
+        <textarea id="captionEditTranslation" rows="4" maxlength="3000"></textarea>
+      </div>
+    </div>
+
+    <footer class="sheet-foot">
+      <span class="spacer"></span>
+      <button value="cancel" class="ghost" type="submit">Cancel</button>
+      <button value="save" class="primary" type="submit">Save changes</button>
+    </footer>
+  </form>
+</dialog>
+
+<script type="module" src="./app.js?v=fd95604b"></script>
+</body>
+</html>
