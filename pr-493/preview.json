@@ -1,7 +1,7 @@
 {
   "number": 493,
-  "commit": "9e0638226858dbfc401bfbeb4ff927548ba43177",
+  "commit": "2595f4a82e039700ec06a64fb21b4715a99a86b2",
   "title": "Keep first-visit Join visible above the Home controls (#491)",
   "branch": "codex/web-first-run-join-2026-10-05",
-  "updated": "2026-10-05 09:36 UTC"
+  "updated": "2026-10-05 10:17 UTC"
 }
