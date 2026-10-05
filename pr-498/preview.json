@@ -1,0 +1,7 @@
+{
+  "number": 498,
+  "commit": "1a84f28472034d0ab6f06c20e3f7808b4a978566",
+  "title": "Fix preview invite QR capacity in Web and native encoders",
+  "branch": "codex/qr-preview-capacity-497-2026-10-05",
+  "updated": "2026-10-05 11:37 UTC"
+}
