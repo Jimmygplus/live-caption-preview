@@ -1,7 +1,0 @@
-{
-  "number": 527,
-  "commit": "bcf6a674ed886437dd67356589a53d0955509941",
-  "title": "fix(mobile): align native sign-in Origin with security page",
-  "branch": "codex/mobile-security-origin-2026-10-06",
-  "updated": "2026-10-05 17:18 UTC"
-}
