@@ -1,7 +1,0 @@
-{
-  "number": 483,
-  "commit": "e992f29fe28562804a44d9af2777abb29d47d3a8",
-  "title": "fix(billing): reconcile reversals, protect issuance and honor closure retention",
-  "branch": "codex/billing-readiness-2026-10-05",
-  "updated": "2026-10-05 09:30 UTC"
-}
