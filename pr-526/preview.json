@@ -1,0 +1,7 @@
+{
+  "number": 526,
+  "commit": "ee47d3b83c0272908ea0200a8e826d4fb557b072",
+  "title": "Prevent billing races and recover unusable speech grants",
+  "branch": "codex/billing-story-fixes-2026-10-06",
+  "updated": "2026-10-05 17:07 UTC"
+}
