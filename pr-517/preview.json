@@ -1,0 +1,7 @@
+{
+  "number": 517,
+  "commit": "e6bbb5c873c23dd4af2ad74b1d212ec9ead055c7",
+  "title": "Fix Sandbox native trial routing and dependency readiness (#515)",
+  "branch": "codex/sandbox-anonymous-trial",
+  "updated": "2026-10-05 15:03 UTC"
+}
