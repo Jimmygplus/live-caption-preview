@@ -1,7 +1,7 @@
 {
   "number": 524,
-  "commit": "5c8cb4787e9fd0d37d46bf1ea4e03922946156e6",
+  "commit": "6be747eab4ec267954740d5eaabb7310a2704f2e",
   "title": "Fix cancellation while caption capture is starting",
   "branch": "codex/web-delivery-2026-10-06",
-  "updated": "2026-10-05 17:17 UTC"
+  "updated": "2026-10-05 18:22 UTC"
 }
