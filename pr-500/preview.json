@@ -1,7 +1,0 @@
-{
-  "number": 500,
-  "commit": "eaaf2739aee2e659dafd0bda7486629208f5597b",
-  "title": "Add verified Apple IAP transactions and refund notifications for Workers",
-  "branch": "codex/apple-iap-verification",
-  "updated": "2026-10-05 12:18 UTC"
-}
