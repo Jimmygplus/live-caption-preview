@@ -1,7 +1,0 @@
-{
-  "number": 523,
-  "commit": "95a65d4f10c42d46714da3b0c7b40a868fb7d8bc",
-  "title": "Ignore cancelled native Join and scanner callbacks",
-  "branch": "codex/mobile-join-cancel-2026-10-06",
-  "updated": "2026-10-05 16:43 UTC"
-}
