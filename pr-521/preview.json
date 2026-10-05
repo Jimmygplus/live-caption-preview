@@ -1,7 +1,0 @@
-{
-  "number": 521,
-  "commit": "db9a1da9fb32a181f82dbb0a7f836bd53fa45b1b",
-  "title": "Preserve native account state after refresh and sign-out failures",
-  "branch": "codex/mobile-testflight-recovery-2026-10-06",
-  "updated": "2026-10-05 16:13 UTC"
-}
