@@ -1,0 +1,7 @@
+{
+  "number": 503,
+  "commit": "de3ca00972ca99138bc10c487d25a7457b97b5a8",
+  "title": "Keep pending Stripe customer deletion retry after retention purge",
+  "branch": "codex/preserve-pending-customer-deletion",
+  "updated": "2026-10-05 12:21 UTC"
+}
