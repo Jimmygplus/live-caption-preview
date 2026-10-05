@@ -1,7 +1,0 @@
-{
-  "number": 514,
-  "commit": "1f00484361e65bfe4eb158c9bcc60537037b98ce",
-  "title": "fix(mobile): parse OpenIAP privacy podspec with CocoaPods 1.16.2",
-  "branch": "codex/fix-openiap-podspec-parser",
-  "updated": "2026-10-05 14:21 UTC"
-}
