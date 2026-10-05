@@ -1,7 +1,0 @@
-{
-  "number": 495,
-  "commit": "57eb8159057d78dc540209300b14781b42f5f5c1",
-  "title": "Fix site cache revalidation redirect loop",
-  "branch": "codex/site-304-redirect-fix-2026-10-05",
-  "updated": "2026-10-05 09:44 UTC"
-}
