@@ -1,7 +1,0 @@
-{
-  "number": 499,
-  "commit": "179a3f261236ef88f7fd95c0e818991303124487",
-  "title": "feat(billing): isolate live ledger and use approved official Price catalog",
-  "branch": "codex/live-billing-isolation-2026-10-05",
-  "updated": "2026-10-05 12:14 UTC"
-}
