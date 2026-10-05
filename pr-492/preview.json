@@ -1,7 +1,0 @@
-{
-  "number": 492,
-  "commit": "a0af07741b047d779af83f7b4001180fb2b4d425",
-  "title": "Fix native sheet drag exits and verify the mobile safe-exit stack",
-  "branch": "codex/mobile-native-regression-2026-10-05",
-  "updated": "2026-10-05 09:53 UTC"
-}
