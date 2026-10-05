@@ -1,0 +1,7 @@
+{
+  "number": 487,
+  "commit": "b2900329559fcb9e3b6a0918ecdfc70ed02d3f56",
+  "title": "Mobile: preserve reply drafts and explain closed rooms (#435 #436)",
+  "branch": "codex/mobile-room-recovery-2026-10-05",
+  "updated": "2026-10-05 09:49 UTC"
+}
