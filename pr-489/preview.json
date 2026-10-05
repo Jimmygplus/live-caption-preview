@@ -1,7 +1,0 @@
-{
-  "number": 489,
-  "commit": "c0fe9bb8e202c86db3253aebd9e61f98a1926e87",
-  "title": "Mobile: add EAS cloud smoke tests without local Xcode",
-  "branch": "codex/eas-cloud-smoke-2026-10-05",
-  "updated": "2026-10-05 09:50 UTC"
-}
