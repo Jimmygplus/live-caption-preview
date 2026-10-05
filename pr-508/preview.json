@@ -1,7 +1,0 @@
-{
-  "number": 508,
-  "commit": "b1fab8c851414017f0f1999a025beda6dda376a6",
-  "title": "Fix empty tracking domains in generated mobile app manifest",
-  "branch": "codex/mobile-empty-tracking-domains-2026-10-05",
-  "updated": "2026-10-05 13:03 UTC"
-}
