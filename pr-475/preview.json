@@ -1,7 +1,0 @@
-{
-  "number": 475,
-  "commit": "22a2dddd9d65f06f7917ec7d6d50ac913a7a4b81",
-  "title": "Web: keep conversation history with safe recovery and deletion (#469)",
-  "branch": "web/transcript-history-469",
-  "updated": "2026-10-05 09:35 UTC"
-}
