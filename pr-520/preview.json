@@ -1,0 +1,7 @@
+{
+  "number": 520,
+  "commit": "de986faa2d9ad63298432e38153f4c33da1c8ec2",
+  "title": "Fix shared weekly quota for verified one-hour purchases",
+  "branch": "codex/native-one-hour-quota-2026-10-06",
+  "updated": "2026-10-05 16:26 UTC"
+}
