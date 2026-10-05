@@ -1,0 +1,7 @@
+{
+  "number": 509,
+  "commit": "ec80c4c3398b199db75cd84b2837dcd4af7bc8cb",
+  "title": "Isolate TestFlight Apple Sandbox accounts and ledger",
+  "branch": "codex/apple-sandbox-environment",
+  "updated": "2026-10-05 13:28 UTC"
+}
