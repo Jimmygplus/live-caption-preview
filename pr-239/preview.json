@@ -1,7 +1,0 @@
-{
-  "number": 239,
-  "commit": "2aaacf30ce0ddb7e53cc499549ddd31df74e3b49",
-  "title": "Use verified Capsie sender for account emails",
-  "branch": "claude/mail-from-roomcaption",
-  "updated": "2026-10-05 17:25 UTC"
-}
