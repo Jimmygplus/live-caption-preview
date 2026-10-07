@@ -1,0 +1,7 @@
+{
+  "number": 542,
+  "commit": "f115cdc1de7c8f0e4e534f7b2bff1f1504931617",
+  "title": "Web: keep the screen on while captions are read (#530)",
+  "branch": "web/wake-lock-530",
+  "updated": "2026-10-07 06:50 UTC"
+}
