@@ -1,7 +1,0 @@
-{
-  "number": 550,
-  "commit": "c3e2f41796ae8b5d01eccb61f85325704c3898d2",
-  "title": "Workers: robots.txt and noindex on the service hosts (Search Console 403)",
-  "branch": "web/subdomain-robots",
-  "updated": "2026-10-07 13:17 UTC"
-}
