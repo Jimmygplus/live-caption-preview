@@ -1,0 +1,7 @@
+{
+  "number": 580,
+  "commit": "68a5c2570e27953473c357ee384bad2190ba2c57",
+  "title": "Upload transcription v1, part 1: Worker routes (off by default)",
+  "branch": "upload/worker-endpoints",
+  "updated": "2026-10-10 15:50 UTC"
+}
