@@ -1,7 +1,7 @@
 {
   "number": 579,
-  "commit": "69454aed627855cba88f0e1e41929f1642b99d62",
+  "commit": "741232cfe935684f24236b195175ed4ea14927bb",
   "title": "Ledger: charge uploaded recordings by audio length (#535)",
   "branch": "claude/upload-ledger",
-  "updated": "2026-10-10 14:15 UTC"
+  "updated": "2026-10-10 15:03 UTC"
 }
