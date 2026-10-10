@@ -1,0 +1,7 @@
+{
+  "number": 586,
+  "commit": "708892457a3aab613f50cfbd279aafb99a3556c4",
+  "title": "Add a manual Deploy sandbox workflow behind an approval",
+  "branch": "claude/deploy-sandbox",
+  "updated": "2026-10-10 17:28 UTC"
+}
