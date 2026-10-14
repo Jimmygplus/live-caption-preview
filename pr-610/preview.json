@@ -1,7 +1,0 @@
-{
-  "number": 610,
-  "commit": "ea75767df6cda3b20457d094d50da84d1515a565",
-  "title": "Adopt the iOS scene life cycle with a config plugin (iOS 27 SDK launch crash)",
-  "branch": "claude/ios-scene-lifecycle",
-  "updated": "2026-10-14 15:56 UTC"
-}
