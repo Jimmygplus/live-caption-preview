@@ -1,0 +1,7 @@
+{
+  "number": 602,
+  "commit": "d80f5b8c92f3905f3e376ef81ffb035a146c9ce7",
+  "title": "Save a long conversation without rewriting it into JSON each time (#585 B)",
+  "branch": "claude/recorder-save-585",
+  "updated": "2026-10-14 09:19 UTC"
+}
