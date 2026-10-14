@@ -1,10 +1,10 @@
 // Small, dependency-free QR encoder for short same-origin join URLs.
-// It emits a Version 5 / error-correction L symbol (up to 106 UTF-8 bytes).
-
-const VERSION = 5;
-const SIZE = 17 + VERSION * 4;
-const DATA_CODEWORDS = 108;
-const ECC_CODEWORDS = 26;
+// Keep Version 5-L for existing short links; Version 6-L holds preview links.
+// Each entry describes a complete QR block layout, not just a byte limit.
+const VERSIONS = [
+  { version: 5, dataCodewords: 108, eccCodewords: 26, blocks: 1 },
+  { version: 6, dataCodewords: 136, eccCodewords: 18, blocks: 2 },
+];
 
 function gfMultiply(x, y) {
   let z = 0;
@@ -48,14 +48,17 @@ function appendBits(bits, value, length) {
 
 function encodePayload(text) {
   const bytes = new TextEncoder().encode(text);
-  if (bytes.length > 106) throw new Error('扫码链接太长，请配置更短的 PUBLIC_URL。');
+  // Versions 5/6 use a 4-bit byte-mode header and an 8-bit byte count.
+  const layout = VERSIONS.find(({ dataCodewords }) => bytes.length * 8 + 12 <= dataCodewords * 8);
+  if (!layout) throw new Error('扫码链接太长，请配置更短的 PUBLIC_URL。');
+  const { version, dataCodewords, eccCodewords, blocks } = layout;
 
   const bits = [];
   appendBits(bits, 0b0100, 4); // byte mode
   appendBits(bits, bytes.length, 8);
   for (const byte of bytes) appendBits(bits, byte, 8);
 
-  const capacity = DATA_CODEWORDS * 8;
+  const capacity = dataCodewords * 8;
   appendBits(bits, 0, Math.min(4, capacity - bits.length));
   while (bits.length % 8) bits.push(0);
 
@@ -63,11 +66,20 @@ function encodePayload(text) {
   for (let i = 0; i < bits.length; i += 8) {
     data.push(bits.slice(i, i + 8).reduce((value, bit) => (value << 1) | bit, 0));
   }
-  for (let pad = 0; data.length < DATA_CODEWORDS; pad += 1) {
+  for (let pad = 0; data.length < dataCodewords; pad += 1) {
     data.push(pad % 2 ? 0x11 : 0xec);
   }
 
-  return [...data, ...remainder(data, divisor(ECC_CODEWORDS))];
+  // Both supported layouts have equally sized data blocks. Compute each
+  // block's Reed–Solomon remainder, then interleave data followed by ECC.
+  const blockSize = dataCodewords / blocks;
+  const generator = divisor(eccCodewords);
+  const chunks = Array.from({ length: blocks }, (_, i) => data.slice(i * blockSize, (i + 1) * blockSize));
+  const errors = chunks.map((chunk) => remainder(chunk, generator));
+  const codewords = [];
+  for (let i = 0; i < blockSize; i += 1) for (const chunk of chunks) codewords.push(chunk[i]);
+  for (let i = 0; i < eccCodewords; i += 1) for (const error of errors) codewords.push(error[i]);
+  return { codewords, version };
 }
 
 function formatBits(mask) {
@@ -79,7 +91,8 @@ function formatBits(mask) {
   return ((data << 10) | value) ^ 0x5412;
 }
 
-function buildMatrix(codewords, mask = 0) {
+function buildMatrix(codewords, version, mask = 0) {
+  const SIZE = 17 + version * 4;
   const modules = Array.from({ length: SIZE }, () => Array(SIZE).fill(false));
   const functional = Array.from({ length: SIZE }, () => Array(SIZE).fill(false));
 
@@ -107,8 +120,8 @@ function buildMatrix(codewords, mask = 0) {
     setFunction(i, 6, i % 2 === 0);
   }
 
-  for (const y of [6, 30]) {
-    for (const x of [6, 30]) {
+  for (const y of [6, SIZE - 7]) {
+    for (const x of [6, SIZE - 7]) {
       if (functional[y][x]) continue;
       for (let dy = -2; dy <= 2; dy += 1) {
         for (let dx = -2; dx <= 2; dx += 1) {
@@ -162,8 +175,6 @@ const TEAL = '#097981';
 // Each dot is a zero-length stroke with round caps: a circle of radius DOT,
 // about a fifth of the size of drawing every circle as arcs.
 const DOT = 0.5;
-const FINDERS = [[0, 0], [SIZE - 7, 0], [0, SIZE - 7]];
-const ALIGNMENT = [30, 30];
 
 const n = (value) => Number(value.toFixed(3));
 // A rounded square as a path, clockwise, from its top-left corner.
@@ -171,11 +182,14 @@ const rounded = (x, y, size, r) => {
   const side = n(size - 2 * r);
   return `M${n(x + r)},${n(y)}h${side}a${r},${r} 0 0 1 ${r},${r}v${side}a${r},${r} 0 0 1 -${r},${r}h-${side}a${r},${r} 0 0 1 -${r},-${r}v-${side}a${r},${r} 0 0 1 ${r},-${r}z`;
 };
-const insideFinder = (x, y) => FINDERS.some(([fx, fy]) => x >= fx && x < fx + 7 && y >= fy && y < fy + 7);
-const insideAlignment = (x, y) => Math.abs(x - ALIGNMENT[0]) <= 2 && Math.abs(y - ALIGNMENT[1]) <= 2;
-
 export function qrSvg(text) {
-  const matrix = buildMatrix(encodePayload(text));
+  const { codewords, version } = encodePayload(text);
+  const SIZE = 17 + version * 4;
+  const FINDERS = [[0, 0], [SIZE - 7, 0], [0, SIZE - 7]];
+  const ALIGNMENT = [SIZE - 7, SIZE - 7];
+  const insideFinder = (x, y) => FINDERS.some(([fx, fy]) => x >= fx && x < fx + 7 && y >= fy && y < fy + 7);
+  const insideAlignment = (x, y) => Math.abs(x - ALIGNMENT[0]) <= 2 && Math.abs(y - ALIGNMENT[1]) <= 2;
+  const matrix = buildMatrix(codewords, version);
   const viewSize = SIZE + QUIET * 2;
   const dots = [];
   for (let y = 0; y < SIZE; y += 1) {
