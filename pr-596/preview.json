@@ -1,0 +1,7 @@
+{
+  "number": 596,
+  "commit": "2e5da1c0e7689af43bcc3ccd6e8abdaa8d22604b",
+  "title": "App: draw captions afresh when the system text size changes (#589)",
+  "branch": "claude/mobile-589-text-size",
+  "updated": "2026-10-14 08:56 UTC"
+}
