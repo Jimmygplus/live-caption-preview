@@ -1,7 +1,0 @@
-{
-  "number": 609,
-  "commit": "1a39de13d23c57adc7b5559e427b864df0dcdf87",
-  "title": "QA: tests that later changes to a caption reach the transcript file (#585)",
-  "branch": "qa/transcript-save-tests",
-  "updated": "2026-10-14 14:36 UTC"
-}
