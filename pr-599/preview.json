@@ -1,0 +1,7 @@
+{
+  "number": 599,
+  "commit": "1ca38d5fb7669e4b02f43409ef71a4a33e0bd142",
+  "title": "Deploy: trigger on built Markdown, skip jobs with nothing to do (#590)",
+  "branch": "claude/deploy-paths-590",
+  "updated": "2026-10-14 09:11 UTC"
+}
