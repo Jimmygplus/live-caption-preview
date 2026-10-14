@@ -1,0 +1,7 @@
+{
+  "number": 595,
+  "commit": "1fb05d3d2552c3a68c201aab187ba400da37f35b",
+  "title": "CI: run checks by change type, preflight the account fixture, EAS candidate log (#590)",
+  "branch": "claude/ci-cost-590",
+  "updated": "2026-10-14 08:33 UTC"
+}
