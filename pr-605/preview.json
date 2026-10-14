@@ -1,0 +1,7 @@
+{
+  "number": 605,
+  "commit": "d6460e78e0e41af87b2225fba992cbbf01f324a3",
+  "title": "App: re-measure the live screens' other text when the text size changes (#589 follow-up)",
+  "branch": "claude/text-size-remeasure",
+  "updated": "2026-10-14 10:22 UTC"
+}
