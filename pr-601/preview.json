@@ -1,7 +1,0 @@
-{
-  "number": 601,
-  "commit": "0c88063f56a37d6d171610964858822b13cc7dd9",
-  "title": "Sandbox: pass a separate upload key to the speech service (#587)",
-  "branch": "claude/sandbox-upload-key-587",
-  "updated": "2026-10-14 08:50 UTC"
-}
