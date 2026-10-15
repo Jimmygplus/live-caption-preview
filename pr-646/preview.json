@@ -1,7 +1,0 @@
-{
-  "number": 646,
-  "commit": "d726f598d44c37fd51119f681312f9cdb0c86eed",
-  "title": "Refuse return URLs with a username or password (#644)",
-  "branch": "claude/return-url-userinfo-644",
-  "updated": "2026-10-15 21:55 UTC"
-}
