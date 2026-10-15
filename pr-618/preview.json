@@ -1,0 +1,7 @@
+{
+  "number": 618,
+  "commit": "fd29818675bdfaa1d75909f9ab301accb208a225",
+  "title": "Mobile: test that a second press within SETTLE_MS draws nothing (M6 follow-up)",
+  "branch": "claude/m6-repress-test",
+  "updated": "2026-10-15 10:10 UTC"
+}
