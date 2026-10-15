@@ -1,7 +1,7 @@
 {
   "number": 619,
-  "commit": "77e89fb2ae43323b6b4cb528de18421f02e3e3ed",
-  "title": "Phone: let go above the first caption and the page settles back (#592)",
+  "commit": "9bb2041145ccc7cea1b61a04d51d8184971755e6",
+  "title": "Phone: no screen of blank above the first caption (#592)",
   "branch": "web-interaction/phone-blank-592",
-  "updated": "2026-10-15 12:55 UTC"
+  "updated": "2026-10-15 13:30 UTC"
 }
