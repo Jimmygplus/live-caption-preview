@@ -1,7 +1,0 @@
-{
-  "number": 604,
-  "commit": "b043c36b007df00d08d3f5edcb5df19207992b8e",
-  "title": "Conversation page: only the captions scroll on wider screens (#592)",
-  "branch": "web-interaction/session-scroll-592",
-  "updated": "2026-10-14 13:53 UTC"
-}
