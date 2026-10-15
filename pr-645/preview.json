@@ -1,0 +1,7 @@
+{
+  "number": 645,
+  "commit": "3bc634d28f31dcfb24f338d59534d1afe2a56f5e",
+  "title": "Test: give the site Worker both share image names (keeps #639 green after #642)",
+  "branch": "claude/site-test-image-keys",
+  "updated": "2026-10-15 21:51 UTC"
+}
