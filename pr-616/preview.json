@@ -1,0 +1,7 @@
+{
+  "number": 616,
+  "commit": "38ba8ad403c1634d33a21317848c913eab0d844a",
+  "title": "Mobile: draw earlier captions only once the reader lets go (M6 jump)",
+  "branch": "claude/m6-settle-before-page",
+  "updated": "2026-10-15 09:41 UTC"
+}
