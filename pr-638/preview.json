@@ -1,0 +1,7 @@
+{
+  "number": 638,
+  "commit": "b8978fd7bd58966be17ba3a00d8d0bcf71360817",
+  "title": "Allow https://capsie.app in relay, trial and feedback (#634)",
+  "branch": "claude/capsie-app-origins-634",
+  "updated": "2026-10-15 21:42 UTC"
+}
