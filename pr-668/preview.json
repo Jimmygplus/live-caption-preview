@@ -1,7 +1,7 @@
 {
   "number": 668,
-  "commit": "9a8bd69910349e2f04ff1f43943dddbe4798a386",
+  "commit": "adc7c9dab3648ed7eb6c10d2306030a64cad824e",
   "title": "Web: Home as a setup page before captions (behind HOME_SETUP, off)",
   "branch": "claude/web-home-setup",
-  "updated": "2026-10-16 18:23 UTC"
+  "updated": "2026-10-16 18:28 UTC"
 }
