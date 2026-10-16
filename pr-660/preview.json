@@ -1,0 +1,7 @@
+{
+  "number": 660,
+  "commit": "f5b2a5e27a749abe02b9f9f958808b8619059e42",
+  "title": "Mobile: free rules v2 behind a switch (device ID, /v1/free/grant)",
+  "branch": "claude/mobile-free-rules-v2",
+  "updated": "2026-10-16 17:57 UTC"
+}
