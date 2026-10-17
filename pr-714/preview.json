@@ -1,7 +1,0 @@
-{
-  "number": 714,
-  "commit": "48d7962670174352240842808eccf322f67e6653",
-  "title": "Refuse Cloudflare's Turnstile test keys outside test billing",
-  "branch": "claude/turnstile-test-key-guard",
-  "updated": "2026-10-17 13:27 UTC"
-}
