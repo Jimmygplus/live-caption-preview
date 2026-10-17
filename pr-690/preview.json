@@ -1,0 +1,7 @@
+{
+  "number": 690,
+  "commit": "ec72e6220a5de9afef181188449a4a57e524628b",
+  "title": "Give the WebKit job 60 minutes",
+  "branch": "claude/webkit-timeout-60",
+  "updated": "2026-10-17 09:19 UTC"
+}
