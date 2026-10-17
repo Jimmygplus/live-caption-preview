@@ -1,0 +1,7 @@
+{
+  "number": 696,
+  "commit": "4e910aa5e666c0969ac2346bfd6b2d0855fc95f0",
+  "title": "Run the WebKit checks in two halves side by side",
+  "branch": "claude/webkit-shards",
+  "updated": "2026-10-17 11:26 UTC"
+}
