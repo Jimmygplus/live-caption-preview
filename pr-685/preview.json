@@ -1,0 +1,7 @@
+{
+  "number": 685,
+  "commit": "ac47a85b3b535e11ef7c7d606af7f90bfab06612",
+  "title": "When the saved microphone is gone, use the default once and say so (#683)",
+  "branch": "claude/mic-fallback-683",
+  "updated": "2026-10-17 08:00 UTC"
+}
