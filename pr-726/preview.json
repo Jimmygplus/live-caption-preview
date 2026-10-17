@@ -1,7 +1,0 @@
-{
-  "number": 726,
-  "commit": "1c9a00c7e45648db6c5cfed518b2e75745124c98",
-  "title": "Pace signed-in free time so a script cannot drain the free pool",
-  "branch": "claude/free-pacing",
-  "updated": "2026-10-17 16:27 UTC"
-}
