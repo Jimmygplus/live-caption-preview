@@ -1,0 +1,7 @@
+{
+  "number": 681,
+  "commit": "f1238310b0de225ceb211dba2863ea9913965fb8",
+  "title": "Keep the page where the reader scrolled when a caption changes height (#679)",
+  "branch": "claude/follow-race-679",
+  "updated": "2026-10-17 07:59 UTC"
+}
