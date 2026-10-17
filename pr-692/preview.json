@@ -1,0 +1,7 @@
+{
+  "number": 692,
+  "commit": "38b366038c740e5ff3e64b49a477eb86523f30c6",
+  "title": "Start #265's speech when the test says so, not after 12 seconds",
+  "branch": "claude/columns-265-gate",
+  "updated": "2026-10-17 10:37 UTC"
+}
