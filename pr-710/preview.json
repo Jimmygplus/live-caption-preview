@@ -1,0 +1,7 @@
+{
+  "number": 710,
+  "commit": "2277c0d2e15aa96d570871085a3599a0673f3aa4",
+  "title": "Sign-in config tests follow the accounts mode (ready for ACCOUNTS_MODE=on)",
+  "branch": "claude/accounts-on-tests",
+  "updated": "2026-10-17 13:15 UTC"
+}
