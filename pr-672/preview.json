@@ -1,0 +1,7 @@
+{
+  "number": 672,
+  "commit": "c928697453537a9a85adc749da73c2fbfd1bb397",
+  "title": "Site Worker: forward ?invite= to the app's host like ?k= and ?dir= (#628)",
+  "branch": "claude/site-forward-invite",
+  "updated": "2026-10-17 08:17 UTC"
+}
