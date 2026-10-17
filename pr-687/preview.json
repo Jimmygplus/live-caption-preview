@@ -1,0 +1,7 @@
+{
+  "number": 687,
+  "commit": "be9acf6b452d9ecb57fc1ca59a1d77826a39bf45",
+  "title": "Turn on Home as a setup page (HOME_SETUP = true)",
+  "branch": "claude/web-home-setup-on",
+  "updated": "2026-10-17 11:05 UTC"
+}
