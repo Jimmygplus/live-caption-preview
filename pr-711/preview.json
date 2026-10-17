@@ -1,7 +1,0 @@
-{
-  "number": 711,
-  "commit": "9d746a55c6ce2db93aadcf7a8e799a7ed16819f8",
-  "title": "Pay path follow-ups: no second Buy while confirming, Continue only with a whole block, buttons on one line",
-  "branch": "web-interaction/pay-path-2",
-  "updated": "2026-10-17 14:34 UTC"
-}
