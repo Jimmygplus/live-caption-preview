@@ -1,0 +1,7 @@
+{
+  "number": 754,
+  "commit": "fc40aa8023cb5b2f1f9bef8a774e76c0c23d68a0",
+  "title": "Site: /zh/ leads home instead of a 404 while the Chinese page is a draft",
+  "branch": "claude/marketing-zh-404",
+  "updated": "2026-10-22 15:07 UTC"
+}
